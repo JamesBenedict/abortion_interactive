@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
+@-ms-viewport {
+  width: device-width; }
+
 h1, h2, h3, h4, h5, h6, p, li {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  color: #4C4C4C; }
 
 h2 {
-  font-size: 2em;
-  color: red; }
+  font-size: 2em; }
 
 p {
   line-height: 2em; }
-
-.dude {
-  height: 200px; }
 
 @media (max-width: 600px) {
   h2 {
