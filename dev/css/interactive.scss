@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import 'breakpoints.scss';
+@import 'universal.scss';
+
+
+html{
+	font-family: 'Lato', sans-serif;
+	background-color: #f2f2f2;
+
+}
+body{
+	background-color: white;
+	width: 80%;
+	height: 90%;
+	max-width: 1600px;
+	margin: 0 auto;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	padding: 2em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	box-shadow: 5px 5px 15px #888888;
+}
+
+h1, h2, h3, h4, h5, h6, p, li{
+	font-family: 'Lato', sans-serif;
+	color: $darkgray
+}
+
+h2{
+	font-size: 2em;
+}
+
+h3{
+	font-weight: 100;
+	font-size: 2em;
+	line-height: 1.25em;
+	margin-top: .4em;
+}
+
+p{
+	line-height: 2em;
+	font-size: 1em;
+}
+
+.dropcap {
+  font-weight: 100;
+  float: left;
+  font-size: 4em;
+  line-height: .8em;
+  margin-top: .1em;
+  margin-right: .1em;
+  padding: 0; }
+
+img{
+	width: 100%;
+	margin-left: 0%
+}
+
+button{
+    border: 2px solid #ccc;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: transparent;
+    text-align: left;
+	font-weight: 100;
+    &:hover{
+        background-color: rgb(51, 122, 183);
+        border: 2px solid rgb(51, 122, 183);
+
+        color: white;
+        h1, h2, h3, h4,h5,h6,p{
+            color: white;
+        }
+    }
+    h1, h2, h3, h4,h5,h6,p{
+        padding-left: 5px;
+        margin-bottom: 5px;
+    }
+    
+}
+
+
+// Character selection
+.text-input{
+        // display:block;
+        margin-top:1em;
+        color:#ccc;
+        }
+.character_button{
+	max-width: 600px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	figure{
+		float: left;
+		height: 100%;
+		margin: 0em;
+		padding: 0em;
+	}
+	.character_icon{
+		max-width: 75px;
+	}
+	.text{
+		display: inline-block;
+		width: 70%;
+	}
+}
+
+
+// nav
+aside.nav_instructions{
+	max-width: 250px;
+	float: right;
+	margin-right: 10%;
+
+	
+}
+
+@media (max-width: 800px){
+aside.nav_instructions{
+	max-width: 100%;
+	float: none;
+	margin-top: 4em;
+	// float: right;
+	// margin-right: 10%;
+
+	
+}
+
+.character_button{
+	width: 100%;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	figure{
+		float: left;
+		margin: 0em;
+		padding: 0em;
+		margin-right: 5%;
+		margin-top: 10%;
+		
+	}
+	.character_icon{
+		max-width: 10%;
+
+	}
+	.text{
+		// float: left;
+		display: inline-block;
+		width: %;
+		margin-top: 0em;
+	}
+}
+}
+
+@media (max-width: 600px){
+
+
+
+
+}
