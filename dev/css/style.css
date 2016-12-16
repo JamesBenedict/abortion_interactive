@@ -2,6 +2,27 @@
 @-ms-viewport {
   width: device-width; }
 
+html {
+  font-family: 'Lato', sans-serif;
+  background-color: #f2f2f2; }
+
+.reveal {
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 5px 5px 15px #888888; }
+
+.slide {
+  width: 80%;
+  height: 80%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-top: 2em; }
+
+.scrollable {
+  overflow-y: auto  !important;
+  overflow-x: hidden !important;
+  height: 200vh; }
+
 h1, h2, h3, h4, h5, h6, p, li {
   font-family: 'Lato', sans-serif;
   color: #4C4C4C; }
@@ -10,10 +31,86 @@ h2 {
   font-size: 2em; }
 
 p {
-  line-height: 2em; }
+  line-height: 2em;
+  font-size: 1.3em; }
+
+img {
+  width: 100%;
+  margin-left: 0%; }
+
+button {
+  border: 3px solid #eee;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: transparent;
+  text-align: left; }
+  button:hover {
+    background-color: #337ab7;
+    color: white; }
+    button:hover h1, button:hover h2, button:hover h3, button:hover h4, button:hover h5, button:hover h6, button:hover p {
+      color: white; }
+  button h1, button h2, button h3, button h4, button h5, button h6, button p {
+    padding-left: 5px;
+    margin-bottom: 5px; }
+
+figure {
+  margin-right: 0em;
+  margin-left: 0em; }
+
+.character {
+  margin-bottom: 2em;
+  max-width: 100%; }
+  .character img {
+    max-width: 100px; }
+  .character .char_text {
+    width: 80%;
+    float: right;
+    padding-right: 1em; }
+
+.break {
+  height: 40em;
+  width: 200px; }
+
+.travel_container {
+  margin-bottom: 6em;
+  width: 100%; }
+  .travel_container figure {
+    width: 70%;
+    float: left;
+    margin-right: 3em; }
+  .travel_container .text {
+    width: 20%;
+    display: inline;
+    margin-bottom: 6em; }
+
+.insurance figure {
+  width: 100px;
+  display: inline-block; }
+
+.insurance img {
+  width: 100%; }
+
+.scrollable {
+  overflow-y: auto  !important;
+  overflow-x: hidden !important;
+  height: 200vh; }
+
+.waiting-container p {
+  width: 48%;
+  float: left; }
+
+.waiting-container figure {
+  width: 50%;
+  display: inline-block; }
 
 @media (max-width: 600px) {
   h2 {
     font-size: 6em; }
   p, li {
-    font-size: 2em; } }
+    font-size: 2em; }
+  .waiting-container p {
+    width: 100%;
+    float: none; }
+  .waiting-container figure {
+    width: 70%;
+    display: inline-block; } }
