@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+@import 'breakpoints.scss';
+
+// xs 
+html{
+	font-family: 'Lato', sans-serif;
+}
+#next{
+	color: blue;
+}
+
+
+// small
+@media (min-width: $sm-min){
+	
+
+}
+
+// medium
+@media (min-width: $md-min){
+	
+	
+}
+
+// xs small
+@media (min-width: $lg-min){
+	
+}
