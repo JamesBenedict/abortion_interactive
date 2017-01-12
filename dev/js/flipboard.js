@@ -1,8 +1,6 @@
 // on button click
 // loop through and find each .page in the html
-    // if class == page active
-        // reset class to page
-    // else 
+// on the next click, hide $this and display nexxt
 
 // $('#next').click(function(){
 //     $(this).css('color', 'red');
