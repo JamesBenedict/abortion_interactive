@@ -14,10 +14,11 @@ html {
   margin-top: 1em;
   box-shadow: 0px 4px 10px  #888888;
   padding: 5%;
+  display: none;
   color: black; }
 
 .active {
-  display: inherit; }
+  display: block; }
 
 @media (min-width: 768px) {
   .page {

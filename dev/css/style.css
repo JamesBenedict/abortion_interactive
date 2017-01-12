@@ -6,4 +6,11 @@ html {
   font-family: 'Lato', sans-serif; }
 
 #next {
-  color: blue; }
+  background-color: white;
+  color: blue;
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 7em;
+  height: 4em;
+  border-radius: 5px; }
