@@ -8,19 +8,37 @@
 
 // $('.body .page:nth-child(3)').attr('id', 'active');
 $( ".page" ).first().addClass('active');
-
-// $("a.next").click(function() {
-//     $('.first').toggleClass("first");
-//     var $toHighlight = $('.doShow').next('li').length > 0 ? $('.doShow').next('li') : $('.event_months li').first();
-//     $('.doShow').removeClass('doShow');
-//     $toHighlight.addClass('doShow');
+$(".page").last().addClass('back_page');
+// no slide up but looping
+// $('#next').click(function(){
+// 	 // $('#active').hide();
+// 	 var $toShow = $('.active').next('.page').length > 0 ?  $('.active').next('.page') : $('#cover_page');
+// 	 $('.active').removeClass('active');
+// 	 $toShow.addClass('active');
 // });
 
-
 $('#next').click(function(){
-	 // $('#active').hide();
-	 var $toShow = $('.active').next('.page').length > 0 ?  $('.active').next('.page') : $('#cover_page');
-	 $('.active').removeClass('active');
-	 $toShow.addClass('active');
+
+	 if($(this).hasClass('.back_page')){
+	 	$('#next').hide();
+
+	 } else{
+	 	 var $toShow = $('.active').next('.page').length > 0 ?  $('.active').next('.page') : $('#cover_page');
+		 $('.active').slideUp('slow', function() {
+		 	$(this).remove();
+		 });
+		 // removeClass('active');
+		 $toShow.fadeIn('slow', function() {
+		 	$(this).addClass('active');
+		 });
+
+
+
+	 }
+
+
+	
+
+	 
 });
 
