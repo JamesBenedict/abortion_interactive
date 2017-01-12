@@ -19,11 +19,8 @@ $( ".page" ).first().addClass('active');
 
 $('#next').click(function(){
 	 // $('#active').hide();
-	 var $toShow = $('.active').next('.page');
-	  // > 0 ? $('#first');
+	 var $toShow = $('.active').next('.page').length > 0 ?  $('.active').next('.page') : $('#cover_page');
 	 $('.active').removeClass('active');
 	 $toShow.addClass('active');
 });
-
-
 
