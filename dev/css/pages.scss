@@ -10,26 +10,46 @@ html{
 
 .page{
 	background-color: white;
-	width: 80%;
-	max-width: 1200px;
+	width: 80vw;
+
 	margin: 0 auto;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	box-shadow: 0px 4px 10px  #888888;
 	padding: 5%;
 	// display: none;
-	color: black;
+	// top: 100vh;
+	
+	position: relative;
+	// // height: 100vh;
+	bottom: -105vh;
+	// height: 0px;
+	// bottom: -500px;
+
 
 }
 
 .active{
+	// position: static;
+	bottom: 0;
+	width: 80vw;
+	max-width: 1200px;
+	height: auto;
+	
 	display: block;
-	overflow-y: hidden;
-	max-height: 500px; /* approximate max height */
 
-	transition-property: all;
-	transition-duration: .5s;
-	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	
+	// position: static;
+	// margin: 0 auto;
+	// top: 10px;
+	// height: 70vh;
+	// overflow-y: hidden;
+	// max-height: 500px; /* approximate max height */
+
+	// transition-property: all;
+	// transition-duration: .5s;
+	// // transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+	// -webkit-transition-timing-function: ease-in;
 }
 
 // small
