@@ -7,7 +7,6 @@ html{
 }
 #next{
 	background-color: white;
-	color: blue;
 	position: absolute;
 	bottom: 20%;
 	right: 15%;
@@ -16,6 +15,15 @@ html{
 	border-radius: 5px;
 }
 
+#prev{
+	background-color: white;
+	position: absolute;
+	bottom: 20%;
+	right: 25%;
+	width: 7em;
+	height: 4em;
+	border-radius: 5px;
+}
 
 // small
 @media (min-width: $sm-min){
