@@ -1,0 +1,22 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.44 194.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #be1e2d;
+        stroke-miterlimit: 10;
+        stroke-width: 21px;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>not-approved</title>
+  <circle class="cls-1" cx="97.22" cy="97.22" r="86.72"/>
+  <line class="cls-2" x1="149.6" y1="28.11" x2="44.83" y2="166.33"/>
+</svg>

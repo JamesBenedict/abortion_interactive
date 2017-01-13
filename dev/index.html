@@ -2,209 +2,67 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<title>Flipbook</title>
 
-	<meta name="viewport" content="width=device-width">
-	<title>Abortion Interactive</title>
-
-	<!--build:css css/style.min.css --> 
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/reveal.css">
-
+	<link rel="stylesheet" href="css/pages.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- endbuild -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
 
 </head>
 <body>
-<!-- 	<h2>you</h2> -->
-		<div class="reveal">
-
-			<div class="slides">
-
-			<section>
-				<section class="scrollable">
-					<h2>A step-by-step look at abortions in Indiana</h2>
-					<p>Before their 45th birthday, three in every ten women will have had an abortion. Most women seeking abortions are in their 20s and are already mothers.</p>
-
-					<p>While the 1992 Supreme Court case Planned Parenthood v. Casey reaffirmed a woman’s right to receive an abortion, it also gave states more rights to regulate a woman’s ability to access one.</p>
-
-					<p>Since the ruling went into effect, abortions in Indiana have declined by 23 percent. In 2011, 61 percent of Hoosier women lived in a county without a clinic authorized to perform abortions.</p>
-
-					<p>Indiana passed HR1337 in 2016, which put nine new regulations on a woman’s access to abortion. A federal judge blocked this bill a week before being enacted, but State Rep. Curt Nisly announced he will introduce bill calling for the total ban on abortion in the next legislative session.</p>
-
-					<p>This interactive will introduce you to three characters stories and take you through the process of pursuing an abortion in Indiana.</p>
-
-					<div class="break"></div>
-				</section>
-
-				<section class="scrollable">
-					<h2>Character</h2>
-					<button class="character">
-						<img src="img/character.svg" alt="">
-						<div class="char_text">
-							<h3>Jordan</h3>
-							<p>Jordan is a 35-year-old mother living in Fishers. She drives to work in Indianapolis where she works as a salaried employee for a local bank. Her boss has hinted at a promotion coming up and believes she might make the move into management soon. Her job at the bank offers her both sick days and private insurance.</p>
-							
-						</div>
-					</button>
-
-					<button class="character">
-						<img src="img/character.svg" alt="">
-						<div class="char_text">
-							<h3>Emma</h3>
-							<p>Emma is a 27-year-old college graduate who just moved back home to Fort Wayne. Her parents’ insurance no longer covers her and she decided she’s healthy enough to not need insurance quite yet. She uses public transportation to get to both of her part-time jobs where she could get fired for taking too much time off. She thinks one of these jobs may turn into a full-time career and is hoping to get benefits then.</p>
-							
-						</div>
-					</button>
-
-					<button class="character">
-						<img src="img/character.svg" alt="">
-						<div class="char_text">
-							<h3>Leah</h3>
-							<p>Leah is a 17-year-old who just received a scholarship from a state university. She is still living with her parents in Columbus as she wraps up her senior year. Both of her parents work for the county and have told Leah she’ll have to pay for college herself. Leah started saving for books by delivering pizzas in her parents’ car after school. Her parents have public insurance and she is still covered by thier policy.</p>
-							
-						</div>
-					</button>
-
-					<div class="break">
-					
-				</section>
-
-				<section class="scrollable">
-					<h2>Getting down to research</h2>
-
-					<p>You find out you’re pregnant and your heart drops. You know you want to make arrangements to terminate the pregnancy as soon as possible. You sit down at your computer and begin researching your nearest clinic.</p>
-
-					<div class="travel_container">
-						<figure>
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3093.5495864529817!2d-86.53463879999998!3d39.162225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886c66e6d311e2a3%3A0xb6aa24caf06f0e2b!2sPlanned+Parenthood+-+Bloomington+Health+Center!5e0!3m2!1sen!2sus!4v1481847036427" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-						</figure>
-						
-						<div class="text">
-							<h3>Clinic Hours</h3>
-							<p>Monday</p>
-							<p>Tuesday</p>
-							<p>Wednesday</p>
-							<p>Thursday</p>
-							<p>Friday</p>
-							<p>Saturday</p>
-							<p>Sunday</p>
-							<button>Find a new clinic</button>
-						</div>
-					</div>
-					
-					<p>The clinic nearest you is XXX hours away. Their available hours are listed below. We can find you another clinic if you want using the button above. Once you find a clinic, scroll to your insurance below.</p>
-
-					
-					<div class="break">
-					
-
-				</section>
-
-				<section class="insurance">
-					<h2>Insurance</h2>
-					<p>Not every insurance policy covers or even helps with the cost of abortions, which can cost over $500. Click below to see if your insurance will help you out. Insurance coverage is built into your character selection.</p>
-					<button>Check my insurance</button>
-					<br>
-					<figure><img src="img/approved.svg" alt=""></figure>
-
-					<figure style="opacity:.25;"><img src="img/not-approved.svg" alt=""></figure>
-
-					<p>You are approved</p>
-
-					<p>Based on your insurance, your abortion will likely cost somewhere between $XX and $XX. Does this seem afforadable to you?</p>
-
-					<p>Scroll to contiune or swipe right to stop seeking an abortion.</p>
-				</section>
-
-				<section class="scrollable">
-					<h2>Counseling</h2>
-					<p>You make your appointment at the clinic and the first step required by the state of Indiana is the provider counseling you against going through with the procedure. Below is a video of what they might tell you in a typical counseling session.</p>
-
-					<img src="img/test.jpg" alt="">
-					<div class="break"></div>
-				</section>
 
 
-				<section>
-					<h2>Ultrasound</h2>
-					<p>Indiana requires women seeking an abortion to receive an ultrasound during their counseling session and listen to their fetus’s heartbeat. Click the speaker below to experience this.</p>
-					<figure>
-						<img src="img/test.jpg" alt="">
-					</figure>
+<div  class="page" style="background-color: green;">
+	<div class="card">
+		<h1>first</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ornare egestas mi at elementum. Curabitur consectetur magna congue, tempus ante malesuada, laoreet libero. Pellentesque habitant morbi trnistique senectus et netus et malesuada fames ac turpis egestas. Pellentesque tristique efficitur sagittis. Nullam at mi mi. Aenean libero quam, molestie sed magna non, maximus consectetur urna. Morbi mauris ipsum, bibendum eu risus sit amet, tristique faucibus risus. Nulla bibendum, purus ut sodales pellentesque, erat justo iaculis odio, sit amet pellentesque turpis felis sed elit.</p>
 
-					<div class="break"></div>
-				</section>
+	</div>
+	
+	
+</div>
 
-				<section class="scrollable">
-					<h2>Waiting</h2>
+<div class="page" style="background-color: blue;">
+<div class="card">
+	<h2>second</h2>
+</div>
+	
+	
+</div>
 
-					<div class="waiting-container">
-						<p>Between your counseling appointment and your procedure, Indiana requires an 18-hour waiting period. This can be complicated by the fact that many clinics keep odd hours on only certain days of the week. To represent those 18 hours, please wait nine seconds before moving to the next step</p>
-						<figure>
-							<img src="img/waiting-01.svg" alt="">
-						</figure>
-						<div class="break"></div>
-						
+<div class="page" style="background-color: red;">
+	<div class="card">
+		<h2>third</h2>
+	</div>
 
-					</div>
-					
-					
-				</section>
-
-
-				<section class="scrollable">
-					<h2>Procedure</h2>
-					<p>You arrive at the clinic to receive your abortion and are suprised to learn you have to be escorted from your car to the building. Protesters are gathered outside of the clinic with graphic photos and catchy slogans scrawled on poster board.</p>
-					<img src="img/test.jpg" alt="">
-
-					<p>You make it into the clinic, fill out your paper work and are taken into an exam room. The doctor double checks that you want to receive your abortion and upon your confirmation hands you a pill. You take the pill and the doctor hands you another to be taken at home later.</p>
-
-					<div class="break"></div>
-				</section>
-
-				<section>
-					<h2>Safety</h2>
-					<p>Your operation was successful. Most are. Less than one percent of abortions have a complication arise and they are considered 1/10th as dangerous as childbirth.</p>
-					
-					<p>Of course, you spent a week wearing a sanitary pad to work, bleeding more than you normally would even on your period, but you figure that’s a small price to pay.</p>
-				</section>
-
-				<section class="scrollable">
-					<h2>Abortion rates are decreasing across Midwest, United States</h2>
-					<p>The amount of women receiving an abortion per 100,000 women age 15-44 has decreased in the United States. Multiple factors, like increased contraceptive use, have lead to this decline. </p>
-					<figure>
-						<img src="graphics/Abortion_Rates.jpg" alt="">
-						<figcaption>SOURCE CDC</figcaption>
-					</figure>
-					<div class="break"></div>
-				</section>
-
-					
-			</section>
+</div>
 
 
-				
-				<section>
-					<h2>Stop seeking an abortion in Indiana</h2>
-					<p>You will lose all progress in your story line, are you sure you want to exit?</p>
+<button id="prev">
+	<h5>back</h5>
+</button>
 
-					<button>Confirm</button>
-				</section>
-
-			</div>
-
-		</div>
-       
-<!-- build:js js/app.min.js 
- --> <script src="js/reveal.js"></script>
-        <script>
-            Reveal.initialize({
-  center: false
-});
- </script>
+<button id="next">
+	<h5>next</h5>
+</button>
 
 
-<!-- endbuild -->
+
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>	
+<script type="text/javascript" src="js/flipboard.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+
+
+	
+
+
+
+</script>
 
 </body>
 </html>
