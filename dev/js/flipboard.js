@@ -32,9 +32,10 @@ var main = function () {
             nextPage = $('.page').first();
         }
 
-        activePage.slideUp(500).removeClass('active');
-        nextPage.slideDown(1100).addClass('active');
+        nextPage.slideDown(400).addClass('active');
+        // activePage.slideUp(1200).removeClass('active');
 
+        activePage.removeClass('active');
         // activePage.effect("slide", {"direction" : "up", "mode" : "hide"} , 600).removeClass('active');
 
         // nextPage.effect("slide", {"direction" : "down", "mode" : "show"} , 1200).addClass('active');
