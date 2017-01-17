@@ -16,7 +16,8 @@ html {
   background-color: white;
   width: 50vw;
   padding: 5%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 5%; }
 
 .active {
   bottom: 10px;

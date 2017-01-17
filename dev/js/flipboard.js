@@ -39,14 +39,29 @@ var main = function () {
 
         if (nextPage.hasClass('time_delay')){
         
-        	// activePage.removeClass('active');
+        	nextPage.slideDown(700).addClass('active').removeClass('time_delay');
+        	activePage.removeClass('active');
+        
+        	// time delay for coun
         	setTimeout(function(){
-        		nextPage.slideDown(700).addClass('active');
-        	}, 3000)
+        		$('#next').prop('disabled', true);
+        		
+        	}, 1000)
+
+
+        	setTimeout(function(){
+        		$('#next').prop('disabled', false);
+        		// nextPage.slideDown(700).addClass('active').removeClass('time_delay');
+        		// activePage.removeClass('active');
+        	}, 5000)
+	        	
+
+
 
         	// setTimeout(advancment(activePage, nextPage), 5000);
         	// activePage.delay(200000).removeClass('active');
         } else{
+        	// $('#next').prop('disabled', false);
         	activePage.slideDown(100).delay(10).removeClass('active');
         	nextPage.slideDown(700).addClass('active');
         }
