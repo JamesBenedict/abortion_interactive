@@ -32,14 +32,12 @@ var main = function () {
             nextPage = $('.page').first();
         }
 
-        nextPage.slideDown(400).addClass('active');
-        // activePage.slideUp(1200).removeClass('active');
-
+        nextPage.slideDown(700).addClass('active');
         activePage.removeClass('active');
+        // activePage.slideUp(1200).removeClass('active');
+        // activePage.removeClass('active');
         // activePage.effect("slide", {"direction" : "up", "mode" : "hide"} , 600).removeClass('active');
-
         // nextPage.effect("slide", {"direction" : "down", "mode" : "show"} , 1200).addClass('active');
-
         checkNavigation();
     });
 
@@ -52,9 +50,12 @@ var main = function () {
             prevSlide = $('.page').last();
         }
 
-        activePage.slideUp(1200).removeClass('active');
-        prevSlide.slideDown(1200).addClass('active');
+        // prevSlide.slideDown(1200).addClass('active');
+        // activePage.slideUp(1200).removeClass('active');
+// 
 
+		prevSlide.slideDown(700).addClass('active');
+		activePage.slideUp(600).removeClass('active');
         // activePage.effect("slide", {"direction" : "up", "mode" : "hide"} , 600).removeClass('active');
         // nextPage.effect("slide", {"direction" : "down", "mode" : "show"} , 1200).addClass('active');
 
