@@ -5,20 +5,21 @@
 html {
   font-family: 'Lato', sans-serif; }
 
-#next {
-  background-color: white;
+.button_wrap {
   position: absolute;
   bottom: 20%;
-  right: 15%;
-  width: 7em;
-  height: 4em;
-  border-radius: 5px; }
+  right: 20%; }
+  .button_wrap #next {
+    background-color: transparent;
+    position: relative;
+    border: 0;
+    height: 4em; }
+  .button_wrap #prev {
+    background-color: transparent;
+    position: relative;
+    height: 4em;
+    margin-right: 2em;
+    border: 0em; }
 
-#prev {
-  background-color: white;
-  position: absolute;
-  bottom: 20%;
-  right: 25%;
-  width: 7em;
-  height: 4em;
-  border-radius: 5px; }
+img {
+  width: 100%; }

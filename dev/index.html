@@ -3,16 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Flipbook</title>
-
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/pages.css">
-	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/flipbook.css">
+	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-
+<!-- <div id="book">
+ -->
 <div  class="page" style="background-color: green;">
 	<div class="card">
 		<h1>first</h1>
@@ -23,12 +23,16 @@
 <div class="page" style="background-color: blue;">
 	<div class="card">
 		<h2>second</h2>
+		<!-- <figure>
+			<img src="img/graphics/Abortion_Rates.jpg" alt="">
+		</figure> -->
+		
 	</div>
 </div>
 
 <div class="page time_delay" style="background-color: purple;">
 	<div class="card">
-		<h2>I am a time delay dingle</h2>
+		<h2>haha you no advance for 2 second	</h2>
 	</div>
 </div>
 
@@ -39,30 +43,21 @@
 </div>
 
 
-<button id="prev">
-	<h5>back</h5>
-</button>
+<div class="button_wrap">
+	<button id="prev">
+		<img src="img/prev.png" alt="">
+	</button>
 
-<button id="next">
-	<h5>next</h5>
-</button>
-
-
-
-
-<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>	
-<script type="text/javascript" src="js/flipboard.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-
-<script type="text/javascript">
-
-
-
+	<button id="next">
+		<img src="img/next.png" alt="">
+	</button>
+</div>
 	
-
-
-
-</script>
+<!-- </div>
+ -->
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/flipbook.js"></script>
 
 </body>
 </html>
