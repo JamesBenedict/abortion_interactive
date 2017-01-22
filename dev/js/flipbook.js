@@ -23,6 +23,7 @@ function checkWindow() {
     winWidth = $(window).width(),
     docHeight = $(document).height(),
     docWidth = $(document).width();
+
 }
 
     
@@ -45,6 +46,8 @@ function checkNavigation() {
     }
 }
 
+var nextWindow = -25,
+prevWindow = 0;
 
 var navigation = function () {
 	// manages the next/back button navigation
@@ -66,15 +69,14 @@ var navigation = function () {
         activeTransition
         nextTransition
     
-        $('#book').css('transform', 'translateY(-25%)');
-        // $('#book').animate({
-        //     // transform: 'translate3d(0, 500px, 0)'
+        // $('#book').css('transform', 'translateY(-25%)');
+        
+        $('#book').css('transform', 'translateY(' +nextWindow +'%)');   
+        nextWindow += -25;
+        // alert(nextWindow)
 
-        // });
 
-        //     transform: translate(0, 50%, 0);
 
-        // $('#book').addClass('transition');
         // // conditional events for certain slides 
         // if (nextPage.hasClass('time_delay')){
         // // this adds a delay stopping the next button from working for 2 seconds 
@@ -113,8 +115,8 @@ var navigation = function () {
 		prevTransition
 		activeTransition
 
-                $('#book').css('transform', 'translateY(0%)');
-
+                $('#book').css('transform', 'translateY('+ prevWindow + '%)');   
+                prevWindow += 25
         checkNavigation();
     });
 };
