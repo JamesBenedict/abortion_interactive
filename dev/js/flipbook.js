@@ -17,6 +17,20 @@ $( ".page" ).first().addClass('active');
 $( ".page" ).first().addClass('first');
 $(".page").last().addClass('last');
 
+// resize the window
+function checkWindow() {
+    var winHeight = $(window).height(),
+    winWidth = $(window).width(),
+    docHeight = $(document).height(),
+    docWidth = $(document).width();
+}
+
+    
+
+
+
+
+
 function checkNavigation() {
 	// hides / shows the next/back buttons depending if the page is the first or last page in the book
     if ($('.active').hasClass('first')) {
@@ -40,34 +54,47 @@ var navigation = function () {
     	 // code for next button
         var activePage = $('.active'),
         nextPage = activePage.next('.page'),
-        nextTransition = nextPage.slideDown(700).addClass('active'),
-        activeTransition = activePage.slideDown(100).delay(100).removeClass('active');
+
+
+        nextTransition = nextPage.addClass('active'),
+        activeTransition = activePage.removeClass('active');
         // would be useful if I wanted to loop, but for now I don't. Didnt want to delete yet
         // if (nextPage.length === 0) {
         //     nextPage = $('.page').first();
         // }
 
-        // conditional events for certain slides 
-        if (nextPage.hasClass('time_delay')){
-        // this adds a delay stopping the next button from working for 2 seconds 
-        	nextTransition
-        	activeTransition
-        	// initally disables the next button
-        	// $('#next').prop('disabled', true);
-            $('.button_wrap').hide();
+        activeTransition
+        nextTransition
+    
+        $('#book').css('transform', 'translateY(-25%)');
+        // $('#book').animate({
+        //     // transform: 'translate3d(0, 500px, 0)'
 
+        // });
 
+        //     transform: translate(0, 50%, 0);
+
+        // $('#book').addClass('transition');
+        // // conditional events for certain slides 
+        // if (nextPage.hasClass('time_delay')){
+        // // this adds a delay stopping the next button from working for 2 seconds 
+        // 	activeTransition
+        //     nextTransition
+
+        // 	// initally disables the next button
+        // 	// $('#next').prop('disabled', true);
+        //     $('.button_wrap').hide();
         
-        	// gives user back control after time delay
-        	setTimeout(function(){
-        		// $('#next').prop('disabled', false);
-                $('.button_wrap').show();
-        	}, 2000)
-        } else{
-        	// regular slide transition
-        	activeTransition
-        	nextTransition
-        }
+        // 	// gives user back control after time delay
+        // 	setTimeout(function(){
+        // 		// $('#next').prop('disabled', false);
+        //         $('.button_wrap').show();
+        // 	}, 1000)
+        // } else{
+        // 	// regular slide transition
+        // 	activeTransition
+        // 	nextTransition
+        // }
 
         checkNavigation();
     });
@@ -77,21 +104,28 @@ var navigation = function () {
     	//prev slide function
         var activePage = $('.active'),
         prevPage = activePage.prev('.page'),
-        nextTransition = prevPage.slideDown(700).addClass('active'),
-        activeTransition = activePage.slideDown(100).delay(100).removeClass('active');
+        prevTransition = prevPage.addClass('active'),
+        activeTransition = activePage.removeClass('active');
         // old transition style
         // prevPage.slideDown(1200).addClass('active');
         // activePage.slideUp(1200).removeClass('active');
 		
-		nextTransition
+		prevTransition
 		activeTransition
+
+                $('#book').css('transform', 'translateY(0%)');
 
         checkNavigation();
     });
 };
 
 // loads the script duuuuuuuude
-$(document).ready(navigation);
+$(document).ready(function (){
+    checkWindow();
+    navigation();
+
+});
+
 
 
 // works referenced 
