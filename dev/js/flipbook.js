@@ -53,11 +53,15 @@ var navigation = function () {
         	nextTransition
         	activeTransition
         	// initally disables the next button
-        	$('#next').prop('disabled', true);
+        	// $('#next').prop('disabled', true);
+            $('.button_wrap').hide();
+
+
         
         	// gives user back control after time delay
         	setTimeout(function(){
-        		$('#next').prop('disabled', false);
+        		// $('#next').prop('disabled', false);
+                $('.button_wrap').show();
         	}, 2000)
         } else{
         	// regular slide transition

@@ -5,21 +5,5 @@
 html {
   font-family: 'Lato', sans-serif; }
 
-.button_wrap {
-  position: absolute;
-  bottom: 20%;
-  right: 20%; }
-  .button_wrap #next {
-    background-color: transparent;
-    position: relative;
-    border: 0;
-    height: 4em; }
-  .button_wrap #prev {
-    background-color: transparent;
-    position: relative;
-    height: 4em;
-    margin-right: 2em;
-    border: 0em; }
-
 img {
   width: 100%; }
