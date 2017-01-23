@@ -11,6 +11,7 @@
 	// card: the container for your content, in this example it is the white rectangle
 	// page: the container for your card(s) and the div that the animations/transitions are applied to. In this example it is the color background
 	// book: the entire interactive that contains all pages 
+    // window: the actively seen page
 
 // sets up the domain and defines the start page
 $( ".page" ).first().addClass('active');
@@ -21,12 +22,26 @@ $(".page").last().addClass('last');
 function checkWindow() {
     var winHeight = $(window).height(),
     winWidth = $(window).width(),
-    docHeight = $(document).height(),
+    docHight = $(document).height(),
     docWidth = $(document).width();
 
 }
 
-    
+docHeight = $(document).height();
+
+function pageHeight (page) {
+    var winHeight = page.height();
+    return winHeight;
+}
+
+function indexPages() {
+    $('.page').each(function (index, value) { 
+        $(this).attr('data-item', index+1);    
+    });
+}
+
+
+
 
 
 
@@ -46,8 +61,7 @@ function checkNavigation() {
     }
 }
 
-var nextWindow = -25,
-prevWindow = 0;
+var nextWindow, prevWindow;
 
 var navigation = function () {
 	// manages the next/back button navigation
@@ -58,6 +72,8 @@ var navigation = function () {
         var activePage = $('.active'),
         nextPage = activePage.next('.page'),
 
+        activeHeight = $(window).height(),
+        nextHeight = nextPage.height(),
 
         nextTransition = nextPage.addClass('active'),
         activeTransition = activePage.removeClass('active');
@@ -68,16 +84,20 @@ var navigation = function () {
 
         activeTransition
         nextTransition
-    
-        // $('#book').css('transform', 'translateY(-25%)');
-        
-        $('#book').css('transform', 'translateY(' +nextWindow +'%)');   
-        nextWindow += -25;
+
+        var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
         // alert(nextWindow)
+        
+        $('#book').css('transform', 'translateY(-' +nextWindow +'px)');   
+        // nextWindow += activePage.scrollTop();
+        // nextWindow += $(window).height();
+        // activeHeight += nextHeight;
+        // alert(activeHeight)
 
 
 
-        // // conditional events for certain slides 
+        // // conditional events for certain slides.
+        // // so far only needed for time slide 
         // if (nextPage.hasClass('time_delay')){
         // // this adds a delay stopping the next button from working for 2 seconds 
         // 	activeTransition
@@ -115,14 +135,24 @@ var navigation = function () {
 		prevTransition
 		activeTransition
 
-                $('#book').css('transform', 'translateY('+ prevWindow + '%)');   
-                prevWindow += 25
+
+        // var prevWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
+        // alert(prevWindow)
+        var depth = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
+       var prevWindow =  depth - (2 * pageHeight(activePage) )
+       alert(depth)
+        $('#book').css('transform', 'translateY(-' + prevWindow+'px)');   
+        // nextWindow += activePage.scrollTop();
+
+                // $('#book').css('transform', 'translateY(-25%)');   
+                // prevWindow += 25
         checkNavigation();
     });
 };
 
 // loads the script duuuuuuuude
 $(document).ready(function (){
+    indexPages();
     checkWindow();
     navigation();
 
