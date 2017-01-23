@@ -120,12 +120,11 @@ var navigation = function () {
         	// regular slide transition
         	activeTransition
         	nextTransition
-
-             var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
+            var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
         // alert(nextWindow)
         
-        $('#book').css('transform', 'translateY(-' +nextWindow +'px)');   
-        }
+            $('#book').css('transform', 'translateY(-' +nextWindow +'px)').css('transition', '.6s ease-in-out');   
+            }
 
         checkNavigation();
     });
@@ -162,7 +161,6 @@ var navigation = function () {
 // loads the script duuuuuuuude
 $(document).ready(function (){
     indexPages();
-    // checkWindow();
     navigation();
 
 });
