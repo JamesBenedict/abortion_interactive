@@ -3,7 +3,8 @@
   width: device-width; }
 
 html {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+  overflow: hidden; }
 
 .test {
   color: yellow;
