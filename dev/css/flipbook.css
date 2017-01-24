@@ -25,11 +25,7 @@ html {
   margin-bottom: 5%; }
 
 .active {
-  color: orange; }
-
-.transition {
-  transform: translate3d(0px, -800px, 0px);
-  transition-duration: 3000ms; }
+  color: purple; }
 
 .button_wrap {
   position: absolute;

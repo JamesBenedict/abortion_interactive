@@ -18,6 +18,13 @@ $( ".page" ).first().addClass('active');
 $( ".page" ).first().addClass('first');
 $(".page").last().addClass('last');
 
+function indexPages() {
+    // adds index number to each instance of the page class
+    $('.page').each(function (index, value) { 
+        $(this).attr('data-item', index+1);    
+    });
+}
+
 // resize the window
 // function checkWindow() {
 //     var winHeight = $(window).height(),
@@ -27,24 +34,11 @@ $(".page").last().addClass('last');
 
 // }
 
-docHeight = $(document).height();
 
 function pageHeight (page) {
     var winHeight = page.height();
     return winHeight;
 }
-
-function indexPages() {
-    $('.page').each(function (index, value) { 
-        $(this).attr('data-item', index+1);    
-    });
-}
-
-
-
-
-
-
 
 
 function checkNavigation() {
@@ -61,99 +55,64 @@ function checkNavigation() {
     }
 }
 
-var nextWindow, prevWindow;
+
+var advance = function (activePage, nextPage){
+    // transition to advance to next slide
+    nextPage.addClass('active')
+    activePage.removeClass('active')
+    var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
+    $('#book').css('transform', 'translateY(-' +nextWindow +'px)').css('transition', '.6s ease-in-out');
+    // alert(nextWindow)
+}
+
+
+var retreat = function (activePage, prevPage){
+    prevPage.addClass('active')
+    activePage.removeClass('active')
+    // transition to the previous window
+    var depth = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
+    var prevWindow =  depth - (2 * pageHeight(activePage) );
+    // alert(depth)
+    $('#book').css('transform', 'translateY(-' + prevWindow+'px)').css('transition', '.6s ease-in-out');   
+}
+
 
 var navigation = function () {
-	// manages the next/back button navigation
+	// calls the advance/retreat functions based on button clicks
+    // adds conditional transitions
     checkNavigation();
-    
+
     $('#next').click(function () {
     	 // code for next button
         var activePage = $('.active'),
-        nextPage = activePage.next('.page'),
-
-        activeHeight = $(window).height(),
-        nextHeight = nextPage.height(),
-
-        nextTransition = nextPage.addClass('active'),
-        activeTransition = activePage.removeClass('active');
-        // would be useful if I wanted to loop, but for now I don't. Didnt want to delete yet
-        // if (nextPage.length === 0) {
-        //     nextPage = $('.page').first();
-        // }
-
-        activeTransition
-        nextTransition
-
-        // var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
-        // // alert(nextWindow)
-        
-        // $('#book').css('transform', 'translateY(-' +nextWindow +'px)');   
-        // nextWindow += activePage.scrollTop();
-        // nextWindow += $(window).height();
-        // activeHeight += nextHeight;
-        // alert(activeHeight)
-
-
+        nextPage = activePage.next('.page');
 
         // conditional events for certain slides.
-        // so far only needed for time slide 
         if (nextPage.hasClass('time_delay')){
         // this adds a delay stopping the next button from working for 2 seconds 
-        	activeTransition
-            nextTransition
-            var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
-        // alert(nextWindow)
-        
-        $('#book').css('transform', 'translateY(-' +nextWindow +'px)');   
-
-        	// initally disables the next button
-        	// $('#next').prop('disabled', true);
+            advance(activePage, nextPage)
             $('.button_wrap').hide();
         
         	// gives user back control after time delay
         	setTimeout(function(){
-        		// $('#next').prop('disabled', false);
                 $('.button_wrap').show();
         	}, 1000)
+            // more conditionals can go here as elifs
         } else{
         	// regular slide transition
-        	activeTransition
-        	nextTransition
-            var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
-        // alert(nextWindow)
-        
-            $('#book').css('transform', 'translateY(-' +nextWindow +'px)').css('transition', '.6s ease-in-out');   
+        	advance(activePage, nextPage)
             }
 
         checkNavigation();
     });
 
-    
     $('#prev').click(function () {
     	//prev slide function
         var activePage = $('.active'),
-        prevPage = activePage.prev('.page'),
-        prevTransition = prevPage.addClass('active'),
-        activeTransition = activePage.removeClass('active');
-        // old transition style
-        // prevPage.slideDown(1200).addClass('active');
-        // activePage.slideUp(1200).removeClass('active');
-		
-		prevTransition
-		activeTransition
+        prevPage = activePage.prev('.page');
 
+        retreat(activePage, prevPage)
 
-        // var prevWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
-        // alert(prevWindow)
-        var depth = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
-        var prevWindow =  depth - (2 * pageHeight(activePage) );
-        // alert(depth)
-        $('#book').css('transform', 'translateY(-' + prevWindow+'px)');   
-        // nextWindow += activePage.scrollTop();
-
-                // $('#book').css('transform', 'translateY(-25%)');   
-                // prevWindow += 25
         checkNavigation();
     });
 };
@@ -164,7 +123,6 @@ $(document).ready(function (){
     navigation();
 
 });
-
 
 
 // works referenced 

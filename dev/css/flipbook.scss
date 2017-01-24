@@ -18,13 +18,9 @@ html{
 }
 .page{
 	position: relative;
-	// top:100vh;
-    // left:0;
 	width: 100vw;
 	height: 100vh;
 	overflow: scroll;
-	// z-index: -10;
-
 }
 
 .card{
@@ -36,20 +32,7 @@ html{
 	margin-bottom: 5%;
 }
 .active{
-    // z-index:1;
-    // top: 0;
-    color: orange;
-
-   
-}
-
-// .hidden{
-// 	display: none;
-// }
-
-.transition{
-	transform: translate3d(0px, -800px, 0px); 
-	transition-duration: 3000ms;
+    color: purple;
 }
 
 .button_wrap{
@@ -71,7 +54,6 @@ html{
 		margin-right: 2em;
 		border: 0em;
 	}
-
 }
 
 
