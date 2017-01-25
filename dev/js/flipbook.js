@@ -35,11 +35,6 @@ function indexPages() {
 // }
 
 
-function pageHeight (page) {
-    var winHeight = page.height();
-    return winHeight;
-}
-
 
 function checkNavigation() {
 	// hides / shows the next/back buttons depending if the page is the first or last page in the book
@@ -60,18 +55,19 @@ var advance = function (activePage, nextPage){
     // transition to advance to next slide
     nextPage.addClass('active')
     activePage.removeClass('active')
-    var nextWindow = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
+    var nextWindow = activePage.height() * parseInt(activePage.attr('data-item'));
     $('#book').css('transform', 'translateY(-' +nextWindow +'px)').css('transition', '.6s ease-in-out');
     // alert(nextWindow)
 }
 
 
 var retreat = function (activePage, prevPage){
+    // transitions to the previous slide
     prevPage.addClass('active')
     activePage.removeClass('active')
     // transition to the previous window
-    var depth = pageHeight(activePage) * parseInt(activePage.attr('data-item'));
-    var prevWindow =  depth - (2 * pageHeight(activePage) );
+    var depth = activePage.height() * parseInt(activePage.attr('data-item'));
+    var prevWindow =  depth - (2 * activePage.height() );
     // alert(depth)
     $('#book').css('transform', 'translateY(-' + prevWindow+'px)').css('transition', '.6s ease-in-out');   
 }
@@ -115,14 +111,22 @@ var navigation = function () {
 
         checkNavigation();
     });
-};
+}
+
+var resizeWindow = function () {
+
+}
 
 // loads the script duuuuuuuude
-$(document).ready(function (){
+$(document).ready(function () {
     indexPages();
     navigation();
 
 });
+
+window.onresize = function () { 
+    resizeWindow()
+}
 
 
 // works referenced 
