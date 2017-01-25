@@ -3,7 +3,8 @@ ID,name,phone,address,city,state,zip,license_no,admin,open,close
 2,PLANNED PARENTHOOD OF INDIANA AND KENTUCKY INC,2197693500,8645 Connecticut St,Merrillville,IN,46410,16-011116-1,JESSICA STIENBARGER,,
 3,PLANNED PARENTHOOD OF INDIANA AND KENTUCKY INC,8123360219,421 S College Ave,Bloomington,IN,47403,16-011117-1,LAURA MILLER,,
 4,PLANNED PARENTHOOD OF INDIANA AND KENTUCKY INC,3178723115,8590 Georgetown Road,INDIANAPOLIS,IN,46268,16-011118-1,DEVYN PURTLEBAUGH,,
-5,"PLANNED PARENTHOOD OF INDIANA AND KENTUCKY, INC -",7654468078,964 Mezzanine Drive,Lafayette,IN,47905,16-013765-1,AMBER KAWLEWSKI,,
+5,"PLANNED PARENTHOOD OF INDIANA AND KENTUCKY, INC -
+",7654468078,964 Mezzanine Drive,Lafayette,IN,47905,16-013765-1,AMBER KAWLEWSKI,,
 6,WOMEN'S MED GROUP PROFESSIONAL CORPORATION,3173539371,1201 N Arlington Ave,INDIANAPOLIS,IN,46219,16-011128-1,W. MARTIN HASKELL,,
 7,,,,,,,,,,
 8,,,,,,,,,,
@@ -16,3 +17,4 @@ ID,name,phone,address,city,state,zip,license_no,admin,open,close
 http://www.in.gov/isdh/reports/QAMIS/abordir/wdirabor.htm,,,,,,,,,,
 http://www.in.gov/isdh/reports/QAMIS/hosdir/wdirhos.htm,,,,,,,,,,
 http://www.state.in.us/isdh/files/Abortion_Directory.pdf,,,,,,,,,,
+http://www.abortion.com/abortion_clinics_state.php?country=United%20States&state=Indiana

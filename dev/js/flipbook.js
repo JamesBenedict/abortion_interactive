@@ -112,13 +112,20 @@ var navigation = function () {
 
         checkNavigation();
     });
-
-   
-
 }
 
 var resizeWindow = function () {
-  // sumthin here
+    console.log('test')
+    currentWindow = $('.active').height() * parseInt($('.active').attr('data-item')-1);
+    $('#book').css('transform', 'translateY(-' + currentWindow +'px)');
+    
+  // sumthin else here
+  // $(window).scroll(function() {
+//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+//        alert("bottom!");
+//    }
+// });
+
 }
 
 // loads the script duuuuuuuude
@@ -143,13 +150,6 @@ window.onresize = function () {
 $(document).scroll(function() {
     // alert('hey')
 });
-
-
-// $(window).scroll(function() {
-//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-//        alert("bottom!");
-//    }
-// });
 
 
 // works referenced 
