@@ -73,6 +73,7 @@ var retreat = function (activePage, prevPage){
 }
 
 
+
 var navigation = function () {
 	// calls the advance/retreat functions based on button clicks
     // adds conditional transitions
@@ -111,22 +112,44 @@ var navigation = function () {
 
         checkNavigation();
     });
+
+   
+
 }
 
 var resizeWindow = function () {
-
+  // sumthin here
 }
 
 // loads the script duuuuuuuude
 $(document).ready(function () {
     indexPages();
     navigation();
+    //  $(window).scroll(function(){
+    //     alert('hey ya');
+    // });
+
+    // $(window).bind('mouseover', function() {
+    //     alert('swoop');
+    // });
+
 
 });
 
 window.onresize = function () { 
     resizeWindow()
 }
+
+$(document).scroll(function() {
+    // alert('hey')
+});
+
+
+// $(window).scroll(function() {
+//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+//        alert("bottom!");
+//    }
+// });
 
 
 // works referenced 
