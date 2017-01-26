@@ -13,46 +13,98 @@ html{
 }
 
 #book{
-	// position: relative;
+	position: relative;
 	// transform: translateY(-25%)
+	// background: url('../img/background.png') no-repeat center center fixed;
+	// -webkit-background-size: cover;
+ // 	-moz-background-size: cover;
+ // 	-o-background-size: cover;
+ // 	background-size: cover;
 }
 .page{
 	position: relative;
 	width: 100vw;
 	height: 100vh;
 	overflow: scroll;
+	// background-color: #00BFFF;
+	
 }
 
 .card{
 	background-color: white;
-	width: 50vw;
+	overflow: scroll;
+	width: 60%;
+	max-height: 70%;
 	padding: 5%;
 	margin: 0 auto;
 	margin-top: 5%;
 	margin-bottom: 5%;
+	box-shadow: 5px 10px 25px #888888;
+
 }
 .active{
-    color: purple;
+    // color: purple;
 }
 
 .button_wrap{
-	position: absolute;
+	position: absolute;	
 	bottom: 5%;
-	right: 2%;
+	// right: 0%;
+	// left: 50%;
+	right: 15%;
 	z-index: 10000;
-	display: block;
-	#next{
-		background-color: transparent;
+	width: 500px;
+	// display: inline-block;
+
+	img{
+		// display: inline-block;
+		// float: left;
+	}
+
+	h2{
+		display: inline-block;
+		text-transform: uppercase;
 		position: relative;
+		width: 50%;
+		vertical-align: text-bottom;
+
+	}
+	#next{
+		// display: inline-block;
+		background-color: white;
+		box-shadow: 5px 10px 25px #888888;
+		// position: relative;
 		border: 0;
-		height: 4em;	
+		height: auto;
+		width: 100px;
+		display: inline-block;
+		padding: 5px 5px 5px 5px;
+		float: right;
+		img{
+			display: inline-block;
+			width: 25px;
+			margin-left: 10%;
+			// float: right;
+		}	
 	}
 	#prev{
-		background-color: transparent;
+		background-color: white;
+		box-shadow: 5px 10px 25px #888888;
+
 		position: relative;
 		height: 4em;
 		margin-right: 2em;
 		border: 0em;
+		height: auto;
+		width: auto;
+		padding: 5px 10px 5px 10px;
+		display: inline-block;
+		float: right;
+		margin-right: 2em;
+		img{
+			display: inline-block;
+			width: 25px;
+		}	
 	}
 }
 

@@ -10,6 +10,9 @@ html {
   color: yellow;
   background-color: black; }
 
+#book {
+  position: relative; }
+
 .page {
   position: relative;
   width: 100vw;
@@ -18,29 +21,53 @@ html {
 
 .card {
   background-color: white;
-  width: 50vw;
+  overflow: scroll;
+  width: 60%;
+  max-height: 70%;
   padding: 5%;
   margin: 0 auto;
   margin-top: 5%;
-  margin-bottom: 5%; }
-
-.active {
-  color: purple; }
+  margin-bottom: 5%;
+  box-shadow: 5px 10px 25px #888888; }
 
 .button_wrap {
   position: absolute;
   bottom: 5%;
-  right: 2%;
+  right: 15%;
   z-index: 10000;
-  display: block; }
-  .button_wrap #next {
-    background-color: transparent;
+  width: 500px; }
+  .button_wrap h2 {
+    display: inline-block;
+    text-transform: uppercase;
     position: relative;
+    width: 50%;
+    vertical-align: text-bottom; }
+  .button_wrap #next {
+    background-color: white;
+    box-shadow: 5px 10px 25px #888888;
     border: 0;
-    height: 4em; }
+    height: auto;
+    width: 100px;
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    float: right; }
+    .button_wrap #next img {
+      display: inline-block;
+      width: 25px;
+      margin-left: 10%; }
   .button_wrap #prev {
-    background-color: transparent;
+    background-color: white;
+    box-shadow: 5px 10px 25px #888888;
     position: relative;
     height: 4em;
     margin-right: 2em;
-    border: 0em; }
+    border: 0em;
+    height: auto;
+    width: auto;
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    float: right;
+    margin-right: 2em; }
+    .button_wrap #prev img {
+      display: inline-block;
+      width: 25px; }

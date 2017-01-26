@@ -1,16 +1,9 @@
-// basic algoithm
-// on button click
-	// loop through and find each .page in the html
-	// locates the active and next page in the list
-	// if next page has special cirumstances (time delay for instance) do them 
-	// hides the active page and transitions to the next page
-	// updates the active page
-// disable next/back for first/last page respectively
-
 // helpful terms
 	// card: the container for your content, in this example it is the white rectangle
 	// page: the container for your card(s) and the div that the animations/transitions are applied to. In this example it is the color background
-	// book: the entire interactive that contains all pages 
+	   // each page is 100vh and 100vw, with overflow scrolling on. It can be populated with as many cards as needed
+    // book: the entire interactive that contains all pages
+        // the book disbales overflow scrolling and the js uses trasnlateY to move up and down to the appropriate page 
     // window: the actively seen page
 
 // sets up the domain and defines the start page
@@ -21,19 +14,9 @@ $(".page").last().addClass('last');
 function indexPages() {
     // adds index number to each instance of the page class
     $('.page').each(function (index, value) { 
-        $(this).attr('data-item', index+1);    
+        $(this).attr('data-item', index+1);
     });
 }
-
-// resize the window
-// function checkWindow() {
-//     var winHeight = $(window).height(),
-//     winWidth = $(window).width(),
-//     docHight = $(document).height(),
-//     docWidth = $(document).width();
-
-// }
-
 
 
 function checkNavigation() {
@@ -52,31 +35,33 @@ function checkNavigation() {
 
 
 var advance = function (activePage, nextPage){
-    // transition to advance to next slide
+    // transition to advance to next page 
     nextPage.addClass('active')
     activePage.removeClass('active')
-    var nextWindow = activePage.height() * parseInt(activePage.attr('data-item'));
+
+    var pageIndex = parseInt(activePage.attr('data-item')),
+    nextWindow = activePage.height() * pageIndex;
     $('#book').css('transform', 'translateY(-' +nextWindow +'px)').css('transition', '.6s ease-in-out');
     // alert(nextWindow)
 }
 
 
 var retreat = function (activePage, prevPage){
-    // transitions to the previous slide
+    // transitions to the previous page
     prevPage.addClass('active')
     activePage.removeClass('active')
-    // transition to the previous window
-    var depth = activePage.height() * parseInt(activePage.attr('data-item'));
-    var prevWindow =  depth - (2 * activePage.height() );
+
+    var pageIndex = parseInt(activePage.attr('data-item')),
+    pageDepth = activePage.height() * pageIndex,
+    prevWindow =  pageDepth - (2 * activePage.height() );
     // alert(depth)
     $('#book').css('transform', 'translateY(-' + prevWindow+'px)').css('transition', '.6s ease-in-out');   
 }
 
 
-
 var navigation = function () {
 	// calls the advance/retreat functions based on button clicks
-    // adds conditional transitions
+    // adds conditional alterations for transitions
     checkNavigation();
 
     $('#next').click(function () {
@@ -86,19 +71,19 @@ var navigation = function () {
 
         // conditional events for certain slides.
         if (nextPage.hasClass('time_delay')){
-        // this adds a delay stopping the next button from working for 2 seconds 
+            // this adds a delay stopping the next button from working for 2 seconds 
             advance(activePage, nextPage)
             $('.button_wrap').hide();
         
         	// gives user back control after time delay
         	setTimeout(function(){
                 $('.button_wrap').show();
-        	}, 1000)
+        	}, 2000)
             // more conditionals can go here as elifs
         } else{
         	// regular slide transition
         	advance(activePage, nextPage)
-            }
+        }
 
         checkNavigation();
     });
@@ -114,43 +99,28 @@ var navigation = function () {
     });
 }
 
+
 var resizeWindow = function () {
-    console.log('test')
+    // console.log('test')
+    // would prefer something that didnt jump as much as this does during the scroll 
+    // at least this keeps the viewr on ther right page
     currentWindow = $('.active').height() * parseInt($('.active').attr('data-item')-1);
     $('#book').css('transform', 'translateY(-' + currentWindow +'px)');
     
-  // sumthin else here
-  // $(window).scroll(function() {
-//    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-//        alert("bottom!");
-//    }
-// });
 
 }
+
 
 // loads the script duuuuuuuude
 $(document).ready(function () {
     indexPages();
     navigation();
-    //  $(window).scroll(function(){
-    //     alert('hey ya');
-    // });
-
-    // $(window).bind('mouseover', function() {
-    //     alert('swoop');
-    // });
+    window.onresize = function () { 
+        resizeWindow()
+    }
 
 
 });
-
-window.onresize = function () { 
-    resizeWindow()
-}
-
-$(document).scroll(function() {
-    // alert('hey')
-});
-
 
 // works referenced 
 // http://jsfiddle.net/794f4yvw/12/
