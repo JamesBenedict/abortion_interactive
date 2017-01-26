@@ -106,8 +106,7 @@ var resizeWindow = function () {
     // at least this keeps the viewr on ther right page
     currentWindow = $('.active').height() * parseInt($('.active').attr('data-item')-1);
     $('#book').css('transform', 'translateY(-' + currentWindow +'px)');
-    
-
+   
 }
 
 
@@ -115,12 +114,18 @@ var resizeWindow = function () {
 $(document).ready(function () {
     indexPages();
     navigation();
-    window.onresize = function () { 
-        resizeWindow()
-    }
-
-
+    
 });
+
+$(window).resize(function (){
+    resizeWindow();
+    
+});
+
+
+
+
+
 
 // works referenced 
 // http://jsfiddle.net/794f4yvw/12/

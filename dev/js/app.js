@@ -5,6 +5,14 @@ var charCardHeight = function () {
 	console.log(parseInt($('.jordan').height()))
 }
 
+$('#prev').click
+
+var buttonDiv = function() {
+  $('.jordan').click(function(){
+    console.log('swoop');
+  })
+}
+
 var navbar = function () {
   $(document).ready( function() {  
     var winHeight = $(window).height(), 
@@ -45,7 +53,7 @@ var navbar = function () {
 $(document).ready(function () {
    charCardHeight();
    navbar();
-
+   buttonDiv();
     window.onresize = function () { 
         charCardHeight();
 
