@@ -17,13 +17,12 @@ html {
   position: relative;
   width: 100vw;
   height: 100vh;
-  overflow: hidden; }
+  overflow: scroll; }
 
 .card {
   background-color: white;
   overflow: scroll;
   width: 70%;
-  max-height: 50%;
   padding: 5%;
   margin: 0 auto;
   margin-top: 5em;
@@ -46,7 +45,7 @@ html {
     margin-right: 5px; }
   .button_wrap #next {
     border-radius: 5px;
-    background-color: white;
+    background-color: #eee;
     box-shadow: 3px 6px 10px #888888;
     border: 0;
     height: auto;
@@ -62,6 +61,7 @@ html {
     border-radius: 5px;
     background-color: white;
     box-shadow: 3px 6px 10px #888888;
+    background-color: #eee;
     position: relative;
     height: 4em;
     margin-right: 2em;

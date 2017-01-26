@@ -27,7 +27,7 @@ html{
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	overflow: scroll;
 	// background-color: #00BFFF;
 	// padding-top: 100px;
 	
@@ -41,7 +41,7 @@ html{
 	background-color: white;
 	overflow: scroll;
 	width: 70%;
-	max-height: 50%;
+	// max-height: 50%;
 	padding: 5%;
 	margin: 0 auto;
 	margin-top: 5em;
@@ -83,7 +83,7 @@ html{
 	#next{
 		border-radius: 5px;
 		// display: inline-block;
-		background-color: white;
+		background-color: #eee;
 		box-shadow: $box-shadow;
 		// position: relative;
 		border: 0;
@@ -106,7 +106,7 @@ html{
 		border-radius: 5px;
 		background-color: white;
 		box-shadow: $box-shadow;
-
+		background-color: #eee;
 		position: relative;
 		height: 4em;
 		margin-right: 2em;
