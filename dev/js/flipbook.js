@@ -80,9 +80,15 @@ var navigation = function () {
                 $('.button_wrap').show();
         	}, 2000)
             // more conditionals can go here as elifs
-        } else{
+        } else if (nextPage.hasClass('exit_card')){
+            $('#exit').show();
+            advance(activePage, nextPage)
+
+            // console.log('swoop');
+        } else {
         	// regular slide transition
         	advance(activePage, nextPage)
+            $('#exit').hide();
         }
 
         checkNavigation();

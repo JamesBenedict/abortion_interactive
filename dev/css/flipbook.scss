@@ -48,8 +48,8 @@ html{
 	// max-height: 50%;
 	padding: 5%;
 	margin: 0 auto;
-	// margin-top: 5em;
-	margin-bottom: 0%;
+	margin-bottom: 2em;
+	margin-top: 2em;
 	box-shadow: $box-shadow;
 	border-radius: 5px;
 
@@ -64,15 +64,7 @@ html{
 	bottom: 5%;
 	right: 10%;
 	z-index: 10000;
-	width: 500px;
-
-	// display: inline-block;
-
-	img{
-		// display: inline-block;
-		// float: left;
-	}
-
+	width: 80%;
 	h4{
 		display: inline-block;
 		text-transform: uppercase;
@@ -82,7 +74,6 @@ html{
 		margin-right: 5px;
 		color: rgba(0,0,0,.5);
 		color: white;
-
 	}
 	#next{
 		border-radius: 5px;
@@ -96,6 +87,7 @@ html{
 		display: inline-block;
 		padding: 5px 5px 5px 5px;
 		float: right;
+		height: 50px;
 		img{
 			display: inline-block;
 			width: 25px;
@@ -114,16 +106,33 @@ html{
 		height: 4em;
 		margin-right: 2em;
 		border: 0em;
-		height: auto;
-		width: auto;
+		
 		padding: 5px 10px 5px 10px;
 		display: inline-block;
 		float: right;
 		margin-right: 2em;
+		height: 50px;
+		width: 50px;
 		img{
 			display: inline-block;
 			width: 25px;
 		}	
+	}
+	#exit{
+		border-radius: 5px;
+		background-color: rgba(0,0,0,.5);
+		box-shadow: $box-shadow;
+		position: relative;
+		height: 4em;
+		margin-right: 2em;
+		border: 0em;
+		height: 50px;
+		width: auto;
+		padding: 5px 10px 5px 10px;
+		display: inline-block;
+		text-align: left;
+		float: left;
+		display: none;
 	}
 }
 
