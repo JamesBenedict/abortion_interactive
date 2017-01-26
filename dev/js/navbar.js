@@ -17,8 +17,8 @@ $(document).ready( function() {
      // value = $(window).scrollTop();
      newValue = parseInt($('.active').height()),
      value += newValue;
-     console.log(newValue);
-     console.log(value);
+     // console.log(newValue);
+     // console.log(value);
      progressBar.attr('value', value);
   });
 
@@ -28,8 +28,8 @@ $(document).ready( function() {
      // value = $(window).scrollTop();
      newValue = parseInt($('.active').height()),
      value -= newValue;
-     console.log(newValue);
-     console.log(value);
+     // console.log(newValue);
+     // console.log(value);
      progressBar.attr('value', value);
   });
 });
