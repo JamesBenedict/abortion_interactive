@@ -76,12 +76,14 @@ html{
 		width: 50%;
 		vertical-align: text-bottom;
 		margin-right: 5px;
+		color: rgba(0,0,0,.5);
+		color: white;
 
 	}
 	#next{
 		border-radius: 5px;
 		// display: inline-block;
-		background-color: #eee;
+		background-color: rgba(0,0,0,.5);
 		box-shadow: $box-shadow;
 		// position: relative;
 		border: 0;
@@ -102,9 +104,9 @@ html{
 	// }
 	#prev{
 		border-radius: 5px;
-		background-color: white;
+		background-color: rgba(0,0,0,.5);
+
 		box-shadow: $box-shadow;
-		background-color: #eee;
 		position: relative;
 		height: 4em;
 		margin-right: 2em;
