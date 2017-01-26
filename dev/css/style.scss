@@ -37,8 +37,33 @@ p{
 	font-weight: 300;
 }
 
+ul{
+	margin-bottom: 1em;
+	li{
+		font-weight: 300;
+	}
+}
+
 img{
 	width: 100%;
+}
+
+.button1{
+	border: 0px;
+	background-color: $gray;
+	color: white;
+	border-radius: 5px;
+	padding: 2%;
+	box-shadow: $box-shadow;
+	font-size: 1em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+
+}
+
+.button1:hover{
+	background-color: $Jamesblue;
+	color: white;
 }
 
 .character_page{
@@ -70,6 +95,7 @@ img{
 	margin-bottom: 0%;
 	box-shadow: $box-shadow;
 	margin-bottom: 2em;
+	border-radius: 5px;
 }
 
 

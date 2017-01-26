@@ -30,8 +30,28 @@ p {
   margin-bottom: 1em;
   font-weight: 300; }
 
+ul {
+  margin-bottom: 1em; }
+  ul li {
+    font-weight: 300; }
+
 img {
   width: 100%; }
+
+.button1 {
+  border: 0px;
+  background-color: #b2b2b2;
+  color: white;
+  border-radius: 5px;
+  padding: 2%;
+  box-shadow: 3px 6px 10px #888888;
+  font-size: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
+.button1:hover {
+  background-color: #42708C;
+  color: white; }
 
 .character_page {
   overflow: scroll; }
@@ -53,7 +73,8 @@ img {
   margin-top: 1em;
   margin-bottom: 0%;
   box-shadow: 3px 6px 10px #888888;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  border-radius: 5px; }
 
 .char_img {
   position: relative;
