@@ -1,38 +1,43 @@
 // progress bar
+var navbar = function () {
+  $(document).ready( function() {  
+    var winHeight = $(window).height(), 
+        docHeight = $(document).height(),
+        progressBar = $('progress'),
+        value = 0,
+        max;
 
-$(document).ready( function() {  
-  var winHeight = $(window).height(), 
-      docHeight = $(document).height(),
-      progressBar = $('progress'),
-      value = 0,
-      max;
+    /* Set the max scrollable area */
+    max = docHeight - winHeight;
+    progressBar.attr('max', max);
 
-  /* Set the max scrollable area */
-  max = docHeight - winHeight;
-  progressBar.attr('max', max);
+    $('#next').click(function () {
 
-  $('#next').click(function () {
+    // $(document).on('scroll', function(){
+       // value = $(window).scrollTop();
+       newValue = parseInt($('.active').height()),
+       value += newValue;
+       // console.log(newValue);
+       // console.log(value);
+       progressBar.attr('value', value);
+    });
 
-  // $(document).on('scroll', function(){
-     // value = $(window).scrollTop();
-     newValue = parseInt($('.active').height()),
-     value += newValue;
-     // console.log(newValue);
-     // console.log(value);
-     progressBar.attr('value', value);
+    $('#prev').click(function () {
+
+    // $(document).on('scroll', function(){
+       // value = $(window).scrollTop();
+       newValue = parseInt($('.active').height()),
+       value -= newValue;
+       // console.log(newValue);
+       // console.log(value);
+       progressBar.attr('value', value);
+    });
   });
+}
 
-  $('#prev').click(function () {
 
-  // $(document).on('scroll', function(){
-     // value = $(window).scrollTop();
-     newValue = parseInt($('.active').height()),
-     value -= newValue;
-     // console.log(newValue);
-     // console.log(value);
-     progressBar.attr('value', value);
-  });
-});
+navbar()
+
 
 
 
