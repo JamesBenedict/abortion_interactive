@@ -54,8 +54,8 @@ nav {
       display: inline-block;
       position: relative; }
   nav .social {
-    position: relative;
-    top: -5px;
+    position: absolute;
+    top: 5px;
     margin: 0;
     padding: 0;
     width: 25%;
