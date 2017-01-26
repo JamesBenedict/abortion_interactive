@@ -6,10 +6,51 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/flipbook.css">
+	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
+
+<nav class="nav_visible">
+		<div class="logo">
+			<a href="http://www.idsnews.com"></a><img src="https://s3.amazonaws.com/media.ids/60674_idslogo_blacko.png" alt="">
+		</div>
+
+		<div class="title xs-hidden md-visible">
+			<h3>Indiana Abortion Regulations Walkthrough</h3>
+			
+		</div>
+		
+		<!-- the social div floats right, the icons are changed in the navbar.js -->
+		<div class="social">
+			<ul>
+				<!-- make sure to include the class popup if you want the link to open in a new window -->
+				<a href="http://www.facebook.com/sharer.php?u=http://specials.idsnews.com/titleixinvestigation/" class="popup">
+					<li class="fb-logo">
+						<img src="img/util/b.facebook.svg" alt="">
+					</li>
+				</a>
+
+				<!-- <a href="https://twitter.com/intent/tweet?text=Title IX policies protect sexual assault investigation, findings from the public specials.idsnews.com/titleixinvestigation/" class="popup"> -->
+				<a href=" " class="popup">
+					<li class="twitter-logo">
+						<img src="img/util/b.twitter.svg" alt="">
+					</li>
+				</a>
+
+				<!-- <a href="#disqus">
+					<li class="comments-logo">
+						<img src="img/util/b.comments.svg" alt="">
+					</li>
+				</a> -->
+			</ul>
+		</div>
+		
+		<!-- This is the indicator bar for how much is left in the story -->
+		<progress value="0"></progress>
+	</nav>
+
 
 <div id="book">
 
@@ -70,6 +111,11 @@
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/navbar.js"></script>
+<script>
+
+
+</script>
 <script type="text/javascript" src="js/flipbook.js"></script>
 
 </body>
