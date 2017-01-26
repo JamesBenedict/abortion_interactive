@@ -1,15 +1,35 @@
 // progress bar
+
 $(document).ready( function() {  
   var winHeight = $(window).height(), 
       docHeight = $(document).height(),
       progressBar = $('progress'),
-      max, value;
+      value = 0,
+      max;
 
   /* Set the max scrollable area */
   max = docHeight - winHeight;
   progressBar.attr('max', max);
-  $(document).on('scroll', function(){
-     value = $(window).scrollTop();
+
+  $('#next').click(function () {
+
+  // $(document).on('scroll', function(){
+     // value = $(window).scrollTop();
+     newValue = parseInt($('.active').height()),
+     value += newValue;
+     console.log(newValue);
+     console.log(value);
+     progressBar.attr('value', value);
+  });
+
+  $('#prev').click(function () {
+
+  // $(document).on('scroll', function(){
+     // value = $(window).scrollTop();
+     newValue = parseInt($('.active').height()),
+     value -= newValue;
+     console.log(newValue);
+     console.log(value);
      progressBar.attr('value', value);
   });
 });

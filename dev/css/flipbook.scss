@@ -27,8 +27,9 @@ html{
 	position: relative;
 	width: 100vw;
 	height: 100vh;
-	overflow: scroll;
+	overflow: hidden;
 	// background-color: #00BFFF;
+	// padding-top: 50px;
 	
 }
 
@@ -39,8 +40,8 @@ html{
 	max-height: 50%;
 	padding: 5%;
 	margin: 0 auto;
-	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-top: 100px;
+	margin-bottom: 0%;
 	box-shadow: $box-shadow;
 
 }
