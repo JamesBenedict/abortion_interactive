@@ -19,13 +19,18 @@ html {
   height: 100vh;
   overflow: scroll; }
 
+.card:first-child {
+  margin-top: 5em; }
+
+.card:last-child {
+  margin-bottom: 6em; }
+
 .card {
   background-color: white;
   overflow: scroll;
   width: 70%;
   padding: 5%;
   margin: 0 auto;
-  margin-top: 5em;
   margin-bottom: 0%;
   box-shadow: 3px 6px 10px #888888;
   border-radius: 5px; }
@@ -36,7 +41,7 @@ html {
   right: 10%;
   z-index: 10000;
   width: 500px; }
-  .button_wrap h2 {
+  .button_wrap h4 {
     display: inline-block;
     text-transform: uppercase;
     position: relative;

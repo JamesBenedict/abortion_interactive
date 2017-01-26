@@ -5,13 +5,12 @@ var charCardHeight = function () {
 	console.log(parseInt($('.jordan').height()))
 }
 
-$('#prev').click
-
-var buttonDiv = function() {
-  $('.jordan').click(function(){
-    console.log('swoop');
-  })
-}
+// var buttonDiv = function() {
+//   $('.jordan').click(function(){
+//     $('.map_name').css('color', 'orange');
+    
+//   })
+// }
 
 var navbar = function () {
   $(document).ready( function() {  
@@ -53,7 +52,7 @@ var navbar = function () {
 $(document).ready(function () {
    charCardHeight();
    navbar();
-   buttonDiv();
+   // buttonDiv();
     window.onresize = function () { 
         charCardHeight();
 

@@ -33,9 +33,13 @@ html{
 	
 }
 
-// .page:first-child{
-// 	margin-top: 100px;
-// }
+.card:first-child{
+	margin-top: 5em;
+}
+
+.card:last-child{
+	margin-bottom: 6em;
+}
 
 .card{
 	background-color: white;
@@ -44,7 +48,7 @@ html{
 	// max-height: 50%;
 	padding: 5%;
 	margin: 0 auto;
-	margin-top: 5em;
+	// margin-top: 5em;
 	margin-bottom: 0%;
 	box-shadow: $box-shadow;
 	border-radius: 5px;
@@ -69,7 +73,7 @@ html{
 		// float: left;
 	}
 
-	h2{
+	h4{
 		display: inline-block;
 		text-transform: uppercase;
 		position: relative;

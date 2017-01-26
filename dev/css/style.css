@@ -17,12 +17,17 @@ h1 {
 
 h2 {
   font-size: 2em;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: .5em; }
 
 h3 {
   font-size: 1em;
   font-weight: 400;
   margin-bottom: .5em; }
+
+h4 {
+  font-size: 2em;
+  font-weight: 700; }
 
 p {
   font-size: 1em;
@@ -38,20 +43,34 @@ ul {
 img {
   width: 100%; }
 
-.button1 {
+.card_button {
   border: 0px;
   background-color: #b2b2b2;
   color: white;
   border-radius: 5px;
-  padding: 2%;
+  padding: 5%;
   box-shadow: 3px 6px 10px #888888;
   font-size: 1em;
   margin-bottom: 1em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  font-weight: 700;
+  width: 250px; }
 
-.button1:hover {
-  background-color: #42708C;
+.card_button:hover {
+  background-color: rgba(66, 112, 140, 0.8);
   color: white; }
+
+.denied_insurance {
+  background-color: #eac5bf;
+  width: 250px; }
+  .denied_insurance:hover {
+    background-color: #eac5bf; }
+
+.approved_insurance {
+  background-color: #bbeac2;
+  width: 250px; }
+  .approved_insurance:hover {
+    background-color: #bbeac2; }
 
 .character_page {
   overflow: scroll; }

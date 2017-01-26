@@ -14,11 +14,16 @@ $md-max: ($lg-min - 1);
 }
 
 $Jamesred: #bd4147;
-$Jamesblue: #42708C;
-$red: #b83c2a;
-$green: #1cba32;
+// $Jamesblue: #42708C;
+$Jamesblue: rgba(66, 112, 140, .8);
+// $red: #b83c2a;
+// $green: #1cba32;
+$red: rgb(234,197,191);
+$green: rgb(187,234,194);
 $darkgray: #4C4C4C;
-$gray: #b2b2b2
+$gray: #b2b2b2;
+$mid-gray: rgba(0,0,0,.35);
+
 
 
 // @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
