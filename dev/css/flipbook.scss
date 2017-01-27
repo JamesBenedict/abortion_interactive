@@ -95,6 +95,22 @@ html{
 			// float: right;
 		}	
 	}
+	#restart{
+		border-radius: 5px;
+		// display: inline-block;
+		background-color: rgba(0,0,0,.5);
+		box-shadow: $box-shadow;
+		// position: relative;
+		border: 0;
+		height: auto;
+		width: 200px;
+		display: none;
+		padding: 5px 5px 5px 5px;
+		float: right;
+		height: 50px;
+		text-align: center;
+		
+	}
 	// #next:hover{
 	// 	background-color: white;
 	// }
@@ -108,7 +124,8 @@ html{
 		border: 0em;
 		
 		padding: 5px 10px 5px 10px;
-		display: inline-block;
+		// display: inline-block;
+		display: none;
 		float: right;
 		margin-right: 2em;
 		height: 50px;

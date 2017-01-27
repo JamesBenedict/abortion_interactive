@@ -66,6 +66,18 @@ html {
       display: inline-block;
       width: 25px;
       margin-left: 10%; }
+  .button_wrap #restart {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 6px 10px #888888;
+    border: 0;
+    height: auto;
+    width: 200px;
+    display: none;
+    padding: 5px 5px 5px 5px;
+    float: right;
+    height: 50px;
+    text-align: center; }
   .button_wrap #prev {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -75,7 +87,7 @@ html {
     margin-right: 2em;
     border: 0em;
     padding: 5px 10px 5px 10px;
-    display: inline-block;
+    display: none;
     float: right;
     margin-right: 2em;
     height: 50px;

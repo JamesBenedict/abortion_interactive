@@ -27,9 +27,11 @@ function checkNavigation() {
     } else if ($('.active').hasClass('last')) {
         $('#next').hide();
         $('#prev').show();
+        $('#restart').show();
     } else {
         $('#prev').show();
         $('#next').show();
+
     }
 }
 
@@ -78,7 +80,7 @@ var navigation = function () {
         	// gives user back control after time delay
         	setTimeout(function(){
                 $('.button_wrap').show();
-        	}, 2000)
+        	}, 500)
             // more conditionals can go here as elifs
         } else if (nextPage.hasClass('exit_card')){
             $('#exit').show();
@@ -102,6 +104,14 @@ var navigation = function () {
         retreat(activePage, prevPage)
 
         checkNavigation();
+    });
+
+    $('#restart').click(function () {
+        $('#book').css('transform', 'translateY(0px)').css('transition', '.6s ease-in-out');   
+        // firstPage = $('.page').first();
+        $('.active').removeClass('active')
+        $('.page').first().addClass('active')
+        $('#restart').hide()
     });
 }
 
