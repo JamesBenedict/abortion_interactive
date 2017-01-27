@@ -36,9 +36,6 @@ html {
   box-shadow: 3px 6px 10px #888888;
   border-radius: 5px; }
 
-.active {
-  color: purple; }
-
 .button_wrap {
   position: absolute;
   bottom: 5%;

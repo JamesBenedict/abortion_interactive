@@ -5,12 +5,13 @@ var charCardHeight = function () {
 	console.log(parseInt($('.jordan').height()))
 }
 
-// var buttonDiv = function() {
-//   $('.jordan').click(function(){
-//     $('.map_name').css('color', 'orange');
+var buttonDiv = function() {
+  $('.jordan').click(function(){
+    $('.clinic_hours').text('yohoe');
+    console.log('swoop');
     
-//   })
-// }
+  })
+}
 
 var navbar = function () {
   $(document).ready( function() {  
@@ -52,7 +53,7 @@ var navbar = function () {
 $(document).ready(function () {
    charCardHeight();
    navbar();
-   // buttonDiv();
+   buttonDiv();
     window.onresize = function () { 
         charCardHeight();
 
