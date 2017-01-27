@@ -24,6 +24,7 @@ function checkNavigation() {
     if ($('.active').hasClass('first')) {
         $('#prev').hide();
         $('#next').show();
+        $('#restart').hide();
     } else if ($('.active').hasClass('last')) {
         $('#next').hide();
         $('#prev').show();
@@ -31,6 +32,7 @@ function checkNavigation() {
     } else {
         $('#prev').show();
         $('#next').show();
+        $('#restart').hide();
 
     }
 }
@@ -112,6 +114,8 @@ var navigation = function () {
         $('.active').removeClass('active')
         $('.page').first().addClass('active')
         $('#restart').hide()
+        checkNavigation();
+
     });
 }
 
