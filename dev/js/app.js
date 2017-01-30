@@ -1,3 +1,13 @@
+var handlebarsInit = function (context) {
+    var template = $('#handlebars-demo').html();
+    var templateScript = Handlebars.compile(template);
+   
+    var html = templateScript(context);
+    $('#content').append(html);
+}
+
+
+
 var charCardHeight = function () {
 	$('.jordan_img').css('height', $('.jordan').height() );
 	$('.emma_img').css('height', $('.emma').height() );
@@ -5,11 +15,18 @@ var charCardHeight = function () {
 	console.log(parseInt($('.jordan').height()))
 }
 
+
 var buttonDiv = function() {
   $('.jordan').click(function(){
-    $('.clinic_hours').text('yohoe');
     console.log('swoop');
-    
+    var context = { "name" : "Ritesh Kumar", "occupation" : "developer" };
+    handlebarsInit(context); 
+  })
+
+  $('.emma').click(function(){
+    console.log('swoop swoop');
+    var context = { "name" : "James Benedict", "occupation" : "developer" };
+    handlebarsInit(context); 
   })
 }
 
@@ -54,10 +71,14 @@ $(document).ready(function () {
    charCardHeight();
    navbar();
    buttonDiv();
+   // handlebarsInit();
     window.onresize = function () { 
         charCardHeight();
 
     }
 
+    
 
 });
+
+
