@@ -48,27 +48,26 @@ img {
   background-color: #b2b2b2;
   color: white;
   border-radius: 5px;
-  padding: 5%;
+  padding: 20px;
   box-shadow: 3px 6px 10px #888888;
-  font-size: 1em;
+  font-size: 1.5em;
   margin-bottom: 1em;
   margin-top: 1em;
   font-weight: 700;
-  width: 250px; }
+  width: 250px;
+  height: 100px; }
 
 .card_button:hover {
   background-color: rgba(66, 112, 140, 0.8);
   color: white; }
 
 .denied_insurance {
-  background-color: #eac5bf;
-  width: 250px; }
+  background-color: #eac5bf; }
   .denied_insurance:hover {
     background-color: #eac5bf; }
 
 .approved_insurance {
-  background-color: #bbeac2;
-  width: 250px; }
+  background-color: #bbeac2; }
   .approved_insurance:hover {
     background-color: #bbeac2; }
 

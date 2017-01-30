@@ -62,13 +62,14 @@ img{
 	background-color: $gray;
 	color: white;
 	border-radius: 5px;
-	padding: 5%;
+	padding: 20px;
 	box-shadow: $box-shadow;
-	font-size: 1em;
+	font-size: 1.5em;
 	margin-bottom: 1em;
 	margin-top: 1em;
 	font-weight: 700;
 	width: 250px;
+	height: 100px;
 }
 
 .card_button:hover{
@@ -82,7 +83,7 @@ img{
 }
 .denied_insurance{
 	background-color: $red;
-	width: 250px;
+	
 	&:hover{
 		background-color: $red;
 	}
@@ -91,7 +92,7 @@ img{
 .approved_insurance{
 	// background-color: rgb(187,234,194);
 	background-color: $green;
-	width: 250px;
+	
 	&:hover{
 		background-color: $green;
 	}
