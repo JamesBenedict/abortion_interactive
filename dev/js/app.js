@@ -1,9 +1,30 @@
+var jordan = { "name" : "Ritesh Kumar", "occupation" : "developer" };
+var emma = { "name" : "Ritesh Kumar", "occupation" : "developer" };
+var leah = { "name" : "Ritesh Kumar", "occupation" : "developer" };
+
+
 var handlebarsInit = function (context) {
     var template = $('#handlebars-demo').html();
     var templateScript = Handlebars.compile(template);
-   
     var html = templateScript(context);
     $('#content').append(html);
+}
+
+var charDataLoad = function() {
+  $('.jordan').click(function(){
+    var context = jordan;
+    handlebarsInit(context); 
+  })
+
+  $('.emma').click(function(){
+    var context = emma;
+    handlebarsInit(context); 
+  })
+
+  $('.leah').click(function(){
+    var context = leah;
+    handlebarsInit(context); 
+  })
 }
 
 
@@ -16,19 +37,6 @@ var charCardHeight = function () {
 }
 
 
-var buttonDiv = function() {
-  $('.jordan').click(function(){
-    console.log('swoop');
-    var context = { "name" : "Ritesh Kumar", "occupation" : "developer" };
-    handlebarsInit(context); 
-  })
-
-  $('.emma').click(function(){
-    console.log('swoop swoop');
-    var context = { "name" : "James Benedict", "occupation" : "developer" };
-    handlebarsInit(context); 
-  })
-}
 
 var navbar = function () {
   $(document).ready( function() {  
@@ -70,7 +78,7 @@ var navbar = function () {
 $(document).ready(function () {
    charCardHeight();
    navbar();
-   buttonDiv();
+   charDataLoad();
    // handlebarsInit();
     window.onresize = function () { 
         charCardHeight();
