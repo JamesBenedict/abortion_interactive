@@ -34,6 +34,18 @@ function checkNavigation() {
         $('#next').show();
         $('#restart').hide();
     }
+
+    if ($('.active').hasClass('exit_card')){
+        $('#exit').show();
+    } else {
+        $('#exit').hide();
+    }
+
+    if ($('.active').hasClass('character_page')){
+        $('.button_wrap').hide();
+    } else{
+        $('.button_wrap').show();
+    }
 }
 
 
@@ -83,24 +95,17 @@ var navigation = function () {
                 $('.button_wrap').show();
         	}, 9000)
             // more conditionals can go here as elifs
-        } else if (nextPage.hasClass('exit_card')){
-            $('#exit').show();
-            advance(activePage, nextPage)
-
-            // console.log('swoop');
         } else if (nextPage.hasClass('character_page')){
             advance(activePage, nextPage)
-            $('.button_wrap').hide();
             $('.characterCard').click(function () {
                 advance(activePage.next('.page'), nextPage.next('.page'))
-                $('.button_wrap').show();
+                        checkNavigation();
+
             })
         } else {
         	// regular slide transition
         	advance(activePage, nextPage)
-            $('#exit').hide();
         }
-
         checkNavigation();
     });
 
@@ -108,9 +113,7 @@ var navigation = function () {
     	//prev slide function
         var activePage = $('.active'),
         prevPage = activePage.prev('.page');
-
         retreat(activePage, prevPage)
-
         checkNavigation();
     });
 
@@ -121,7 +124,6 @@ var navigation = function () {
         $('.page').first().addClass('active')
         $('#restart').hide()
         checkNavigation();
-
     });
 }
 
