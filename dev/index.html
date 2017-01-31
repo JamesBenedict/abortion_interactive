@@ -54,7 +54,39 @@
 
 <div id="book">
 
+<div class="page character_page">
+	<div class="card transparentCard">
+		<h1>Select a charcter</h1>
+		<h3>Click a character to see how Indiana's regulations would affect someone in their position</h3>
+	</div>
+	
+	<div class="characterCard jordan" data="jordan">
+		<div class="char_img jordan_img"></div>
 
+		<div class="char_text">
+			<h3>Jordan</h3>
+			<p>Jordan is a 35-year-old mother living in Fishers. She drives to work in Indianapolis where she works as a salaried employee for a local bank. Her boss has hinted at a promotion coming up and believes she might make the move into management soon. Her job at the bank offers her both sick days and private insurance.</p>
+		</div>
+	</div>
+
+	<div class="characterCard emma" data="emma">
+		<div class="char_img emma_img"></div>
+
+		<div class="char_text">
+			<h3>Emma</h3>
+			<p>Emma is a 27-year-old college graduate who just moved back home to Fort Wayne. Her parents’ insurance no longer covers her and she decided she’s healthy enough to not need insurance. She uses public transportation to get to both of her part- time jobs where she could get fired for taking too much time off. She thinks one of these jobs may turn into a full-time career and is hoping to get benefits then.</p> 		
+		</div>
+	</div>
+
+	<div class="characterCard leah" data="leah">
+		<div class="char_img leah_img"></div>
+
+		<div class="char_text">
+			<h3>Leah</h3>
+			<p>Leah is a 17-year-old who just received a scholarship from a state university. She is still living with her parents in Columbus as she wraps up her senior year. Both of her parents work for the county and have told Leah she’ll have to pay for college herself. Leah started saving for books by delivering pizzas in her parents’ car after school. Her parents have public insurance and she is still covered by thier policy.</p>
+		</div>
+	</div>
+</div>
 
 <div  class="page">
 	<div class="card">
@@ -76,61 +108,49 @@
 	</div>
 </div>
 
-<div class="page character_page">
-	<div class="card transparentCard">
-		<h1>Select a charcter</h1>
-		<h3>Click a character to see how Indiana's regulations would affect someone in their position</h3>
-	</div>
-	
-	<div class="characterCard jordan">
-		<div class="char_img jordan_img"></div>
-
-		<div class="char_text">
-			<h3>Jordan</h3>
-			<p>Jordan is a 35-year-old mother living in Fishers. She drives to work in Indianapolis where she works as a salaried employee for a local bank. Her boss has hinted at a promotion coming up and believes she might make the move into management soon. Her job at the bank offers her both sick days and private insurance.</p>
-		</div>
-	</div>
-
-	<div class="characterCard emma">
-		<div class="char_img emma_img"></div>
-
-		<div class="char_text">
-			<h3>Emma</h3>
-			<p>Emma is a 27-year-old college graduate who just moved back home to Fort Wayne. Her parents’ insurance no longer covers her and she decided she’s healthy enough to not need insurance. She uses public transportation to get to both of her part- time jobs where she could get fired for taking too much time off. She thinks one of these jobs may turn into a full-time career and is hoping to get benefits then.</p> 		
-		</div>
-	</div>
-
-	<div class="characterCard leah">
-		<div class="char_img leah_img"></div>
-
-		<div class="char_text">
-			<h3>Leah</h3>
-			<p>Leah is a 17-year-old who just received a scholarship from a state university. She is still living with her parents in Columbus as she wraps up her senior year. Both of her parents work for the county and have told Leah she’ll have to pay for college herself. Leah started saving for books by delivering pizzas in her parents’ car after school. Her parents have public insurance and she is still covered by thier policy.</p>
-		</div>
-	</div>
-
-	
-</div>
 
 
-
-<div class="page">
+<div class="page exit_card">
 	<div class="card">
-			 
- 			<div id="content"></div>
- 			<script id="handlebars-demo" type="text/x-handlebars-template">
-			   <div>
-			      My name is {{name}}. I am a {{occupation}}.
-			   </div>
-			</script>
-
-			<h2>test</h2>
+		<h2>Insurance</h2>
+		<p>Not every insurance policy covers or even helps with the cost of abortions, which can cost over $500. Click below to see if your character's insurance covers this procedure.</p>
 
 
+		<div id="content"></div>
+
+		<script id="handlebars-demo" type="text/x-handlebars-template">
+	   		<!-- <div>
+	      	My name is {{name}}. I am a {{occupation}}.
+	   		</div> -->
+
+	   		<button class="card_button {{insurance}}">
+	   			{{insurance_status}}
+	   		</button>
 
 
+		</script>
+
+
+		<button class="card_button insurance">
+			Check Insurance
+		</button>
+
+		<button class="card_button denied_insurance">
+			Denied
+		</button>
+
+		<button class="card_button approved_insurance">
+			Approved
+		</button>
+
+		<p>Based on your insurance, your abortion will likely cost somewhere between $XX and $XX. Does this seem afforadable to you?</p>
 	</div>
+
+	<!-- <br> -->
 </div>
+
+
+
 
 <div class="page">
 	<div class="card">
@@ -156,28 +176,7 @@
 	</div>
 </div>
 
-<div class="page exit_card">
-	<div class="card">
-		<h2>Insurance</h2>
-		<p>Not every insurance policy covers or even helps with the cost of abortions, which can cost over $500. Click below to see if your character's insurance covers this procedure.</p>
 
-		<button class="card_button insurance">
-			Check Insurance
-		</button>
-
-		<button class="card_button denied_insurance">
-			Denied
-		</button>
-
-		<button class="card_button approved_insurance">
-			Approved
-		</button>
-
-		<p>Based on your insurance, your abortion will likely cost somewhere between $XX and $XX. Does this seem afforadable to you?</p>
-	</div>
-
-	<!-- <br> -->
-</div>
 
 <div class="page exit_card">
 	<div class="card">

@@ -1,32 +1,47 @@
-var jordan = { "name" : "Ritesh Kumar", "occupation" : "developer" };
-var emma = { "name" : "Ritesh Kumar", "occupation" : "developer" };
-var leah = { "name" : "Ritesh Kumar", "occupation" : "developer" };
-
+var jordan = { "insurance" : "denied_insurance", "insurance_status" : "Denied" };
+emma = { "name" : "Ritesh Kumar", "occupation" : "developer" },
+leah = { "name" : "Ritesh Kumar", "occupation" : "developer" },
+context = 'test';
 
 var handlebarsInit = function (context) {
     var template = $('#handlebars-demo').html();
     var templateScript = Handlebars.compile(template);
     var html = templateScript(context);
-    $('#content').append(html);
+
+    if ( $('.denied_insurance').length < 2 ){
+      $('#content').append(html);
+    }
 }
 
-var charDataLoad = function() {
+
+var characterButton = function () {
+  $('.characterCard').click(function () {
+    var name = $(this).attr('data');
+    alert(name);
+  })
+}
+
+var charDataLoad = function(name) {
   $('.jordan').click(function(){
-    var context = jordan;
-    handlebarsInit(context); 
+    context = jordan;
+    // console.log($('.denied_insurance').length)
+    // handlebarsInit(context); 
+    console.log('swoop');
+    return context;
+    this.context = function () {};  
   })
 
-  $('.emma').click(function(){
-    var context = emma;
-    handlebarsInit(context); 
-  })
 
-  $('.leah').click(function(){
-    var context = leah;
-    handlebarsInit(context); 
-  })
 }
 
+
+var data = function(){
+  $('.insurance').click(function () {
+      var x = context;
+      console.log(x);
+  })
+
+}
 
 
 var charCardHeight = function () {
@@ -78,7 +93,11 @@ var navbar = function () {
 $(document).ready(function () {
    charCardHeight();
    navbar();
+   characterButton();
    charDataLoad();
+   data();
+
+   // checkInsurance();
    // handlebarsInit();
     window.onresize = function () { 
         charCardHeight();
@@ -86,7 +105,6 @@ $(document).ready(function () {
     }
 
     
-
 });
 
 

@@ -82,7 +82,7 @@ var navigation = function () {
         	// gives user back control after time delay
         	setTimeout(function(){
                 $('.button_wrap').show();
-        	}, 500)
+        	}, 9000)
             // more conditionals can go here as elifs
         } else if (nextPage.hasClass('exit_card')){
             $('#exit').show();
