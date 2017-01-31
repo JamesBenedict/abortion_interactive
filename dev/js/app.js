@@ -1,6 +1,6 @@
-var jordan = { "insurance" : "denied_insurance", "insurance_status" : "Denied" };
-emma = { "name" : "Ritesh Kumar", "occupation" : "developer" },
-leah = { "name" : "Ritesh Kumar", "occupation" : "developer" },
+var jordanData = "jordantest"
+emmaData =  'emmatest' ,
+leahData =  "leahtest" ,
 context = 'test';
 
 var handlebarsInit = function (context) {
@@ -14,28 +14,30 @@ var handlebarsInit = function (context) {
 }
 
 
-var characterButton = function () {
+var characterSelection = function () {
   $('.characterCard').click(function () {
     var name = $(this).attr('data');
-    alert(name);
+
+    if (name == 'leah'){
+      context = leahData;
+      console.log(context);
+      return context;
+      this.context = function () {};  
+    } else if (name == 'emma'){
+      context = emmaData;
+      console.log(context);
+      return context;
+      this.context = function () {};  
+    } else {
+      context = jordanData;
+      console.log(context);
+      return context;
+      this.context = function () {};  
+    }
   })
 }
 
-var charDataLoad = function(name) {
-  $('.jordan').click(function(){
-    context = jordan;
-    // console.log($('.denied_insurance').length)
-    // handlebarsInit(context); 
-    console.log('swoop');
-    return context;
-    this.context = function () {};  
-  })
-
-
-}
-
-
-var data = function(){
+var insuranceCard = function(){
   $('.insurance').click(function () {
       var x = context;
       console.log(x);
@@ -93,9 +95,9 @@ var navbar = function () {
 $(document).ready(function () {
    charCardHeight();
    navbar();
-   characterButton();
-   charDataLoad();
-   data();
+   characterSelection();
+   
+   insuranceCard();
 
    // checkInsurance();
    // handlebarsInit();
