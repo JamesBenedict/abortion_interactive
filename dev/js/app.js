@@ -1,4 +1,4 @@
-var jordanData = "jordantest"
+var jordanData = {insurance: "denied_insurance", insurance_status: "denied"},
 emmaData =  'emmatest' ,
 leahData =  "leahtest" ,
 context = 'test';
@@ -17,7 +17,6 @@ var handlebarsInit = function (context) {
 var characterSelection = function () {
   $('.characterCard').click(function () {
     var name = $(this).attr('data');
-
     if (name == 'leah'){
       context = leahData;
       console.log(context);
@@ -37,10 +36,35 @@ var characterSelection = function () {
   })
 }
 
+
 var insuranceCard = function(){
+  // insuranceClass =context[0];
+  // var template = $('#handlebars-demo').html();
+  // var templateScript = Handlebars.compile(template);
+  // var html = templateScript(context);
+  // $('#content').append(html);
+
+
   $('.insurance').click(function () {
-      var x = context;
-      console.log(x);
+      // var x = context;
+      // console.log(x[0]);
+      $('.insurance').hide();
+      // alert(context);
+      var template = $('#handlebars-demo').html();
+      var templateScript = Handlebars.compile(template);
+      var html = templateScript(context);
+      console.log(context)
+      $('#content').append(html);
+
+
+
+      // var template = $('#handlebars-demo').html();
+      // var templateScript = Handlebars.compile(template);
+      // var html = templateScript(context);
+
+      // if ( $('.denied_insurance').length < 2 ){
+      //   $('#content').append(html);
+      // }
   })
 
 }
@@ -52,8 +76,6 @@ var charCardHeight = function () {
 	$('.leah_img').css('height', $('.leah').height() );
 	console.log(parseInt($('.jordan').height()))
 }
-
-
 
 var navbar = function () {
   $(document).ready( function() {  
