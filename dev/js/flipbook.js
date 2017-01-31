@@ -33,7 +33,6 @@ function checkNavigation() {
         $('#prev').show();
         $('#next').show();
         $('#restart').hide();
-
     }
 }
 
@@ -89,6 +88,13 @@ var navigation = function () {
             advance(activePage, nextPage)
 
             // console.log('swoop');
+        } else if (nextPage.hasClass('character_page')){
+            advance(activePage, nextPage)
+            $('.button_wrap').hide();
+            $('.characterCard').click(function () {
+                advance(activePage.next('.page'), nextPage.next('.page'))
+                $('.button_wrap').show();
+            })
         } else {
         	// regular slide transition
         	advance(activePage, nextPage)
