@@ -120,48 +120,36 @@
 			Check Insurance
 		</button>
 
-		<div id="content"></div>
+		<div id="insurance_content"></div>
 
-		<script id="handlebars-demo" type="text/x-handlebars-template">
+		<script id="insurance_hb" type="text/x-handlebars-template">
 	   		<!-- <div>
 	      	My name is {{name}}. I am a {{occupation}}.
 	   		</div> -->
 
-	   		<button class="card_button insurance {{insurance}}">
-	   			{{insurance_status}}
+	   		<button class="card_button insurance {{insurance.class}}">
+	   			{{insurance.status}}
 	   		</button>
+
+	   		<p>Based on your insurance, your abortion will likely cost somewhere between ${{insurance.cost_low}} and ${{insurance.cost_high}}. Does this seem afforadable to you?</p>
 
 
 		</script>
-
-
 		<!-- <button class="card_button insurance">
 			Check Insurance
 		</button>
-
 		<button class="card_button denied_insurance">
 			Denied
 		</button>
-
 		<button class="card_button approved_insurance">
 			Approved
-		</button>
- -->
-		<p>Based on your insurance, your abortion will likely cost somewhere between $XX and $XX. Does this seem afforadable to you?</p>
+		</button>-->	
 	</div>
 </div>
 
-
-
-
-
-
-
-
-
 <div class="page">
 	<div class="card">
-		<h2>Starting Research</h2>
+		<!-- <h2>Starting Research</h2>
 
 		<p>You find out you’re pregnant and your heart drops. You know you want to make arrangements to terminate the pregnancy as soon as possible. You sit down at your computer and begin researching your nearest clinic.</p>
 
@@ -180,6 +168,36 @@
 		<br>
 
 		<p>The clinic nearest you is XXXX away and will take XX hours by car. Their available hours are listed below. We can find you another clinic if you want using the button above. Once you find a clinic, scroll to your insurance below.</p>
+
+ -->
+
+		<div id="map_content"></div>
+
+		<script id="map_hb" type="text/x-handlebars-template">
+	   		
+	   		<h2>Starting Research</h2>
+
+			<p>You find out you’re pregnant and your heart drops. You know you want to make arrangements to terminate the pregnancy as soon as possible. You sit down at your computer and begin researching your nearest clinic.</p>
+
+			<h3 class="clinic_hours">Clinic Hours</h3>
+			<ul>
+				<li>{{clinic1.hours}}</li>
+				<li>Wednesday / Thursday 8AM - 3PM</li>
+				
+			</ul>
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d783460.9461926215!2d-86.241716!3d39.910191!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xae06b59be2e1ba1a!2sPlanned+Parenthood+-+Georgetown+Health+Center!5e0!3m2!1sen!2sus!4v1485405853911" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<br>
+			<button class="card_button">
+				find another clinic
+			</button>
+			<br>
+
+			<p>The clinic nearest you is XXXX away and will take XX hours by car. Their available hours are listed below. We can find you another clinic if you want using the button above. Once you find a clinic, scroll to your insurance below.</p>
+
+
+
+		</script>
 	</div>
 </div>
 
