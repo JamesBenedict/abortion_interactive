@@ -189,3 +189,11 @@ img{
 @media (min-width: $lg-min){
 	
 }
+
+.clinic_hours{
+	.clinic{
+		&:first-child{
+			color: red;
+		}
+	}
+}

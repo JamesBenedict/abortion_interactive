@@ -131,3 +131,6 @@ img {
   margin-bottom: 1em; }
   .char_text h3 {
     max-width: 25%; }
+
+.clinic_hours .clinic:first-child {
+  color: red; }

@@ -1,5 +1,5 @@
 // var jordanData = {insurance: "denied_insurance", insurance_status: "Denied", cost_low: '400', cost_high:'600', clinic_hours: 'Monday / Tuesday 8AM-4PM'},
-var jordanData = {
+var context = {
   // insurance: "denied_insurance",
   // insurance_status: "Denied",
   // cost_low: '400',
@@ -11,56 +11,35 @@ var jordanData = {
     cost_high: '600'
   },
 
-  
-  clinic1: {
-    name: " ",
-    address: " ",
-    hours: "m/w",
-    distance: "",
-    time: " "
-   },
-  clinic2: {
-    name: " ",
-    address: " ",
-    hours: "m/w",
-    distance: "",
-    time: ""
-  },
- clinic3: {
-   name: " ",
-   address: " ",
-   hours: "m/w",
-   distance: "",
-   time: ""
- },
- clinic4: {
-   name: " ",
-   address: " ",
-   hours: "m/w",
-   distance: "",
-   time: ""
- },
- clinic5: {
-   name: " ",
-   address: " ",
-   hours: "m/w",
-   distance: "",
-   time: ""
- },
- clinic6: {
-   name: " ",
-   address: " ",
-   hours: "m/w",
-   distance: "",
-   time: ""
- }
- 
+  clinics: {
+    0: {
+      name: "clinicone",
+      address: " ",
+      hours: "<ul><li>m/w</li><li>yy</li></ul>",
+      distance: "",
+      time: " "
+      },
+    1: {
+      name: "clinictwo",
+      address: " ",
+      hours: "t/w",
+      distance: "",
+      time: ""
+    },
+    2: {
+     name: "clinicthree",
+     address: " ",
+     hours: "f/w",
+     distance: "",
+     time: ""
+    },
+  } 
 }
 
 
 emmaData =  'emmatest' ,
 leahData =  "leahtest" ,
-context = '';
+jordanData = '';
 
 Object.size = function(obj) {
     var size = 0, key;
@@ -117,16 +96,44 @@ var insuranceCard = function(){
 }
 
 var mapCard = function () {
-  // var template = $('#handlebars-demo').html();
-  // var templateScript = Handlebars.compile(template);
-  // var html = templateScript(context);
-  // $('#content').append(html);
   var template = $('#map_hb').html();
   var templateScript = Handlebars.compile(template);
   var html = templateScript(context);
-  console.log(context)
+
+  // console.log(jordanData.insurance.class);
+  console.log('mapCard')
+
   $('#map_content').append(html);
 
+  clinicNum = 0
+
+  $('.map_button').click(function (){
+      // console.log(context.insurance.class);
+      // clinicNum = 'clinic2';
+      var localClinincNum = clinicNum.toString(),
+      clinicCount = Object.size(context.clinics)-1;
+
+      clinicName = context.clinics[clinicNum].hours;
+      console.log(clinicName);
+
+      $('.clinic').text('').append(clinicName);
+
+      if (clinicNum < clinicCount){
+        clinicNum ++
+        console.log(clinicNum)
+        return clinicNum;
+        this.context = function () {};
+      } else{
+        clinicNum = 0;
+        return clinicNum;
+        this.context = function () {}; 
+      }
+     
+     
+   
+
+  })
+  
 }
 
 var charCardHeight = function () {
@@ -181,6 +188,8 @@ var loadData = function (){
 $(document).ready(function () {
     charCardHeight();
     navbar();
+    insuranceCard();
+  mapCard();
     characterSelection();
     window.onresize = function () { 
       charCardHeight();
