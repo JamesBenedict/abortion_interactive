@@ -97,9 +97,11 @@ var navigation = function () {
             // more conditionals can go here as elifs
         } else if (nextPage.hasClass('character_page')){
             advance(activePage, nextPage)
+            // console.log('swoop');
             $('.characterCard').click(function () {
                 advance(activePage.next('.page'), nextPage.next('.page'))
-                        checkNavigation();
+                checkNavigation();
+                // console.log('swoop2');
 
             })
         } else {
