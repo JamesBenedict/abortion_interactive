@@ -21,8 +21,6 @@ function indexPages() {
 
 function checkNavigation() {
 	// hides / shows the next/back buttons depending if the page is the first or last page in the book
-        
-
     if ($('.active').hasClass('first') || $('.active').prev('.page').hasClass('character_page') ) {
         $('#prev').hide();
         $('#next').show();
@@ -135,11 +133,14 @@ var navigation = function () {
     });
 
     $('#restart').click(function () {
-        $('#book').css('transform', 'translateY(0px)').css('transition', '.6s ease-in-out');   
+        $('#book').css('transform', 'translateY(0px)').css('transition', '.6s ease-in-out'); 
+                window.location.reload();
+  
         // firstPage = $('.page').first();
         $('.active').removeClass('active')
         $('.page').first().addClass('active')
         $('#restart').hide()
+
         checkNavigation();
     });
 }

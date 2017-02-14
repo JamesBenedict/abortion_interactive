@@ -487,33 +487,18 @@ var navbar = function () {
   });
 }
 
-var resetData = function (){
-  $('#restart').click(function () {
-    context = '';
-      // console.log(context);
-      // console.log(context.length);
-    loadData(); 
-    return context;
-    this.context = function () {};
-  });
-  // $('#prev').click(function () {
-
-  // });
-
-}
-
 
 var loadData = function (){
   insuranceCard();
   mapCard(); 
 }
 
+
+
 $(document).ready(function () {
     charCardHeight();
     navbar();
-    resetData();
-  //   insuranceCard();
-  // mapCard();
+ 
     characterSelection();
     window.onresize = function () { 
       charCardHeight();
