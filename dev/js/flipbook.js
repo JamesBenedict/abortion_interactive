@@ -149,6 +149,11 @@ var navigation = function () {
         $('.exit_cancel').click(function () {
             $('.exit_card').css('display', 'none');
         })
+        $('.exit_reset').click(function () {
+            $('.exit_card').css('display', 'none');
+             $('#book').css('transform', 'translateY(0px)').css('transition', '.6s ease-in-out'); 
+                window.location.reload();
+        })
     
     // alert(nextWindow)
 

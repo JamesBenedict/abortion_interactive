@@ -145,7 +145,7 @@ img {
     margin-top: 15%;
     margin-left: 12%;
     opacity: 1; }
-  .exit_card .exit_cancel {
+  .exit_card .exit_cancel, .exit_card .exit_reset {
     font-weight: 700; }
 
 .clinic_hours .clinic:first-child {

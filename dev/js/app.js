@@ -348,7 +348,12 @@ Object.size = function(obj) {
     return size;
 };
 
-
+var charCardHeight = function () {
+  $('.jordan_img').css('height', $('.jordan').height() );
+  $('.emma_img').css('height', $('.emma').height() );
+  $('.leah_img').css('height', $('.leah').height() );
+  // console.log(parseInt($('.jordan').height()))
+}
 
 var characterSelection = function () {
 
@@ -380,13 +385,6 @@ var characterSelection = function () {
     
 
   })
-}
-
-var charCardHeight = function () {
-  $('.jordan_img').css('height', $('.jordan').height() );
-  $('.emma_img').css('height', $('.emma').height() );
-  $('.leah_img').css('height', $('.leah').height() );
-  // console.log(parseInt($('.jordan').height()))
 }
 
 var insuranceCard = function(){
@@ -449,9 +447,7 @@ var mapCard = function () {
   })
 }
 
-
-
-var navbar = function () {
+var progressBar = function () {
   $(document).ready( function() {  
     var winHeight = $(window).height(), 
         docHeight = $(document).height(),
@@ -487,19 +483,17 @@ var navbar = function () {
   });
 }
 
-
 var loadData = function (){
   insuranceCard();
   mapCard(); 
+  counselCard();
 }
-
-
 
 $(document).ready(function () {
     charCardHeight();
-    navbar();
- 
+    progressBar();
     characterSelection();
+    // load data is called in characterSelection
     window.onresize = function () { 
       charCardHeight();
     }    
