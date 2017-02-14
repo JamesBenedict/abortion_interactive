@@ -21,6 +21,8 @@ function indexPages() {
 
 function checkNavigation() {
 	// hides / shows the next/back buttons depending if the page is the first or last page in the book
+        
+
     if ($('.active').hasClass('first')) {
         $('#prev').hide();
         $('#next').show();
@@ -41,11 +43,19 @@ function checkNavigation() {
         $('#exit').hide();
     }
 
-    // if ($('.active').hasClass('character_page')){
-    //     $('.button_wrap').hide();
-    // } else{
-    //     $('.button_wrap').show();
-    // }
+    if ($('.active').hasClass('character_page')){
+        $('.button_wrap').hide();
+    } else{
+        $('.button_wrap').show();
+    }
+
+    if ($('.active').prev('.page').hasClass('character_page')){
+         $('#prev').hide();
+         console.log('1')
+     } else {
+         $('#prev').show();
+         console.log('2')
+     }
 }
 
 
@@ -76,11 +86,12 @@ var retreat = function (activePage, prevPage){
 
 
 var characterNav = function(activePage, nextPage){
-    $('.button_wrap').hide();
+    // $('.button_wrap').hide();
     $('.characterCard').click(function () {
         advance(activePage.next('.page'), nextPage.next('.page'))
-        $('.button_wrap').show();
+        // $('.button_wrap').show();
         checkNavigation();
+
         // console.log('swoop2');
     })
             checkNavigation();
@@ -116,6 +127,8 @@ var navigation = function () {
         } else {
         	// regular slide transition
         	advance(activePage, nextPage);
+            checkNavigation();
+
         }
     });
 
@@ -123,8 +136,9 @@ var navigation = function () {
     	//prev slide function
         var activePage = $('.active'),
         prevPage = activePage.prev('.page');
+
         retreat(activePage, prevPage)
-        
+
         checkNavigation();
     });
 
@@ -137,7 +151,6 @@ var navigation = function () {
         checkNavigation();
     });
 }
-
 
 var resizeWindow = function () {
     // console.log('test')

@@ -338,7 +338,7 @@ leahData =  {
     
   } 
 },
-context = '',
+context = '';
 // util
 Object.size = function(obj) {
     var size = 0, key;
@@ -349,7 +349,9 @@ Object.size = function(obj) {
 };
 
 
+
 var characterSelection = function () {
+
   $('.characterCard').click(function () {
     var name = $(this).attr('data');
     if (name == 'leah'){
@@ -375,6 +377,8 @@ var characterSelection = function () {
       return context;
       this.context = function () {}; 
     }
+    
+
   })
 }
 
@@ -483,6 +487,21 @@ var navbar = function () {
   });
 }
 
+var resetData = function (){
+  $('#restart').click(function () {
+    context = '';
+      // console.log(context);
+      // console.log(context.length);
+    loadData(); 
+    return context;
+    this.context = function () {};
+  });
+  // $('#prev').click(function () {
+
+  // });
+
+}
+
 
 var loadData = function (){
   insuranceCard();
@@ -492,6 +511,7 @@ var loadData = function (){
 $(document).ready(function () {
     charCardHeight();
     navbar();
+    resetData();
   //   insuranceCard();
   // mapCard();
     characterSelection();
