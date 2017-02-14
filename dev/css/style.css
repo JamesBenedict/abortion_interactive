@@ -45,7 +45,7 @@ img {
 
 .card_button {
   border: 0px;
-  background-color: #b2b2b2;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   border-radius: 5px;
   padding: 20px;

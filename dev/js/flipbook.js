@@ -41,11 +41,11 @@ function checkNavigation() {
         $('#exit').hide();
     }
 
-    if ($('.active').hasClass('character_page')){
-        $('.button_wrap').hide();
-    } else{
-        $('.button_wrap').show();
-    }
+    // if ($('.active').hasClass('character_page')){
+    //     $('.button_wrap').hide();
+    // } else{
+    //     $('.button_wrap').show();
+    // }
 }
 
 
@@ -74,6 +74,28 @@ var retreat = function (activePage, prevPage){
 }
 
 
+
+var characterNav = function(activePage, nextPage){
+    $('.button_wrap').hide();
+    $('.characterCard').click(function () {
+        advance(activePage.next('.page'), nextPage.next('.page'))
+        $('.button_wrap').show();
+        checkNavigation();
+        // console.log('swoop2');
+    })
+            checkNavigation();
+}
+
+var waitingNav = function (activePage, nextPage){
+    $('.button_wrap').hide();
+    // // gives user back control after time delay
+    setTimeout(function(){
+        $('.button_wrap').show();
+        console.log('time')
+    }, 3000)
+    console.log('waiting');
+}
+
 var navigation = function () {
 	// calls the advance/retreat functions based on button clicks
     // adds conditional alterations for transitions
@@ -85,30 +107,16 @@ var navigation = function () {
         nextPage = activePage.next('.page');
 
         // conditional events for certain slides.
-        if (nextPage.hasClass('time_delay')){
-            // this adds a delay stopping the next button from working for 2 seconds 
-            advance(activePage, nextPage)
-            $('.button_wrap').hide();
-        
-        	// gives user back control after time delay
-        	setTimeout(function(){
-                $('.button_wrap').show();
-        	}, 9000)
-            // more conditionals can go here as elifs
-        } else if (nextPage.hasClass('character_page')){
-            advance(activePage, nextPage)
-            // console.log('swoop');
-            $('.characterCard').click(function () {
-                advance(activePage.next('.page'), nextPage.next('.page'))
-                checkNavigation();
-                // console.log('swoop2');
-
-            })
+        if (nextPage.hasClass('character_page')){
+            advance(activePage, nextPage);
+            characterNav(activePage, nextPage);
+        } else if (nextPage.hasClass('time_delay')){
+            advance(activePage, nextPage);
+            waitingNav(activePage, nextPage);
         } else {
         	// regular slide transition
-        	advance(activePage, nextPage)
+        	advance(activePage, nextPage);
         }
-        checkNavigation();
     });
 
     $('#prev').click(function () {
@@ -116,6 +124,7 @@ var navigation = function () {
         var activePage = $('.active'),
         prevPage = activePage.prev('.page');
         retreat(activePage, prevPage)
+        
         checkNavigation();
     });
 

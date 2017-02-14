@@ -1,4 +1,3 @@
-// var jordanData = {insurance: "denied_insurance", insurance_status: "Denied", cost_low: '400', cost_high:'600', clinic_hours: 'Monday / Tuesday 8AM-4PM'},
 var jordanData = {
   // insurance: "denied_insurance",
   // insurance_status: "Denied",
@@ -112,7 +111,6 @@ var jordanData = {
     
   } 
 }
-
 
 emmaData =  {
   // insurance: "denied_insurance",
@@ -340,8 +338,8 @@ leahData =  {
     
   } 
 },
-context = '';
-
+context = '',
+// util
 Object.size = function(obj) {
     var size = 0, key;
     for (key in obj) {
@@ -356,7 +354,7 @@ var characterSelection = function () {
     var name = $(this).attr('data');
     if (name == 'leah'){
       context = leahData;
-      console.log(context.length);
+      // console.log(context.length);
       loadData(); 
       return context;
       this.context = function () {}; 
@@ -364,7 +362,7 @@ var characterSelection = function () {
     } else if (name == 'emma'){
       context = emmaData;
       // console.log(context);
-      console.log(context.length);
+      // console.log(context.length);
       loadData(); 
       return context;
       this.context = function () {};
@@ -372,14 +370,19 @@ var characterSelection = function () {
     } else {
       context = jordanData;
       // console.log(context);
-      console.log(Object.size(context));
+      // console.log(Object.size(context));
       loadData(); 
       return context;
       this.context = function () {}; 
     }
-
   })
+}
 
+var charCardHeight = function () {
+  $('.jordan_img').css('height', $('.jordan').height() );
+  $('.emma_img').css('height', $('.emma').height() );
+  $('.leah_img').css('height', $('.leah').height() );
+  // console.log(parseInt($('.jordan').height()))
 }
 
 var insuranceCard = function(){
@@ -410,7 +413,7 @@ var mapCard = function () {
   $('.clinic_hours').append(context.clinics[0].hours);
   $('.clinic_map').append(context.clinics[0].map);
 
-  console.log('ye')
+  // console.log('map')
   clinicNum = 1
 
   $('.map_button').click(function (){
@@ -439,20 +442,10 @@ var mapCard = function () {
         return clinicNum;
         this.context = function () {}; 
       }
-     
-     
-   
-
   })
-  
 }
 
-var charCardHeight = function () {
-	$('.jordan_img').css('height', $('.jordan').height() );
-	$('.emma_img').css('height', $('.emma').height() );
-	$('.leah_img').css('height', $('.leah').height() );
-	// console.log(parseInt($('.jordan').height()))
-}
+
 
 var navbar = function () {
   $(document).ready( function() {  
