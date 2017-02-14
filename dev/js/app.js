@@ -355,6 +355,7 @@ var charCardHeight = function () {
   // console.log(parseInt($('.jordan').height()))
 }
 
+
 var characterSelection = function () {
 
   $('.characterCard').click(function () {
@@ -483,17 +484,17 @@ var progressBar = function () {
   });
 }
 
+
 var loadData = function (){
   insuranceCard();
   mapCard(); 
-  counselCard();
 }
 
 $(document).ready(function () {
     charCardHeight();
     progressBar();
+ 
     characterSelection();
-    // load data is called in characterSelection
     window.onresize = function () { 
       charCardHeight();
     }    
