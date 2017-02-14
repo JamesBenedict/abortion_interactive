@@ -35,7 +35,7 @@ function checkNavigation() {
         $('#restart').hide();
     }
 
-    if ($('.active').hasClass('exit_card')){
+    if ($('.active').hasClass('exitable')){
         $('#exit').show();
     } else {
         $('#exit').hide();
@@ -140,6 +140,18 @@ var navigation = function () {
         $('.active').removeClass('active')
         $('.page').first().addClass('active')
         $('#restart').hide()
+
+        checkNavigation();
+    });
+
+    $('#exit').click(function () {
+        $('.exit_card').css('display', 'inline-block');
+        $('.exit_cancel').click(function () {
+            $('.exit_card').css('display', 'none');
+        })
+    
+    // alert(nextWindow)
+
 
         checkNavigation();
     });

@@ -16,7 +16,7 @@ h1 {
   margin-bottom: .5em; }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-bottom: .5em; }
 
@@ -131,6 +131,22 @@ img {
   margin-bottom: 1em; }
   .char_text h3 {
     max-width: 25%; }
+
+.exit_card {
+  display: none;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  color: white; }
+  .exit_card .text-box {
+    margin-top: 15%;
+    margin-left: 12%;
+    opacity: 1; }
+  .exit_card .exit_cancel {
+    font-weight: 700; }
 
 .clinic_hours .clinic:first-child {
   color: red; }
