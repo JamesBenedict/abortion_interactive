@@ -23,7 +23,7 @@ function checkNavigation() {
 	// hides / shows the next/back buttons depending if the page is the first or last page in the book
         
 
-    if ($('.active').hasClass('first')) {
+    if ($('.active').hasClass('first') || $('.active').prev('.page').hasClass('character_page') ) {
         $('#prev').hide();
         $('#next').show();
         $('#restart').hide();
@@ -48,14 +48,6 @@ function checkNavigation() {
     } else{
         $('.button_wrap').show();
     }
-
-    if ($('.active').prev('.page').hasClass('character_page')){
-         $('#prev').hide();
-         console.log('1')
-     } else {
-         $('#prev').show();
-         console.log('2')
-     }
 }
 
 
