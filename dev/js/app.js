@@ -131,7 +131,7 @@ Object.size = function(obj) {
     return size;
 };
 
-var progressBar = function () {
+function progressBar () {
   $(document).ready( function() {  
     var winHeight = $(window).height(), 
         docHeight = $(document).height(),
@@ -167,7 +167,7 @@ var progressBar = function () {
   });
 }
 
-var resizeWindow = function () {
+function resizeWindow () {
     // console.log('test')
     // would prefer something that didnt jump as much as this does during the scroll 
     // at least this keeps the viewr on ther right page
@@ -175,7 +175,7 @@ var resizeWindow = function () {
     $('#book').css('transform', 'translateY(-' + currentWindow +'px)');
 }
 
-var flipbookUtil = function () {
+function flipbookUtil () {
   // sets up the domain and defines the start page
   $( ".page" ).first().addClass('active');
   $( ".page" ).first().addClass('first');
@@ -224,10 +224,8 @@ function checkNavigation() {
 }
 
 
-
-
 // navigation
-var advance = function (activePage, nextPage){
+function advance (activePage, nextPage){
     // transition to advance to next page 
     nextPage.addClass('active')
     activePage.removeClass('active')
@@ -238,7 +236,7 @@ var advance = function (activePage, nextPage){
     // alert(nextWindow)
 }
 
-var retreat = function (activePage, prevPage){
+function retreat (activePage, prevPage){
     // transitions to the previous page
     prevPage.addClass('active')
     activePage.removeClass('active')
@@ -250,7 +248,7 @@ var retreat = function (activePage, prevPage){
     $('#book').css('transform', 'translateY(-' + prevWindow+'px)').css('transition', '.6s ease-in-out');   
 }
 
-var navigation = function () {
+function navigation () {
   // calls the advance/retreat functions based on button clicks
     // adds conditional alterations for transitions
     checkNavigation();
@@ -316,7 +314,7 @@ var navigation = function () {
 }
 
 // individual card js
-var characterNav = function(activePage, nextPage){
+function characterNav(activePage, nextPage){
     // $('.button_wrap').hide();
     $('.characterCard').click(function () {
         advance(activePage.next('.page'), nextPage.next('.page'))
@@ -328,7 +326,7 @@ var characterNav = function(activePage, nextPage){
             checkNavigation();
 }
 
-var characterSelection = function () {
+function characterSelection () {
   $('.characterCard').click(function () {
     var name = $(this).attr('data');
     if (name == 'leah'){
@@ -359,7 +357,7 @@ var characterSelection = function () {
   })
 }
 
-var insuranceCard = function(){
+function insuranceCard(){
   $('.insurance').click(function () {
       // var x = context;
       // console.log(x[0]);
@@ -373,7 +371,7 @@ var insuranceCard = function(){
   })
 }
 
-var mapCard = function () {
+function mapCard () {
   // var template = $('#map_hb').html();
   // var templateScript = Handlebars.compile(template);
   // var html = templateScript(context);
@@ -419,7 +417,10 @@ var mapCard = function () {
   })
 }
 
-var waitingNav = function (activePage, nextPage){
+// function counselCard () {
+
+// }
+function waitingNav (activePage, nextPage){
     $('.button_wrap').hide();
     // // gives user back control after time delay
     setTimeout(function(){
@@ -429,7 +430,7 @@ var waitingNav = function (activePage, nextPage){
     console.log('waiting');
 }
 
-var loadData = function (){
+function loadData (){
   insuranceCard();
   mapCard(); 
 }
