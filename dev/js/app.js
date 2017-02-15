@@ -257,18 +257,21 @@ function navigation () {
        // code for next button
         var activePage = $('.active'),
         nextPage = activePage.next('.page');
+        advance(activePage, nextPage);
 
         // conditional events for certain slides.
         if (nextPage.hasClass('character_page')){
-            advance(activePage, nextPage);
             characterNav(activePage, nextPage);
         } else if (nextPage.hasClass('time_delay')){
-            advance(activePage, nextPage);
+  
             waitingNav(activePage, nextPage);
+        } else if (nextPage.hasClass('counsel_page')) {
+          counselCard();
         } else {
           // regular slide transition
-          advance(activePage, nextPage);
+
             checkNavigation();
+
 
         }
     });
@@ -417,9 +420,11 @@ function mapCard () {
   })
 }
 
-// function counselCard () {
-
-// }
+function counselCard () {
+  videos = $('.autoplay'),
+  videos[0].play();
+  // console.log(videos)
+}
 function waitingNav (activePage, nextPage){
     $('.button_wrap').hide();
     // // gives user back control after time delay
